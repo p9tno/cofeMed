@@ -1,0 +1,115 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qmh4f');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qmh4f#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qmh4f') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qmh4f') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qmh4f##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_arrow_left {
+  &:before {
+    content: $icon_arrow_left; 
+  }
+}
+.icon_arrow_right {
+  &:before {
+    content: $icon_arrow_right; 
+  }
+}
+.icon_arrow_long {
+  &:before {
+    content: $icon_arrow_long; 
+  }
+}
+.icon_arrow_long_sm {
+  &:before {
+    content: $icon_arrow_long_sm; 
+  }
+}
+.icon_arrow_sm {
+  &:before {
+    content: $icon_arrow_sm; 
+  }
+}
+.icon_arrow_oval {
+  &:before {
+    content: $icon_arrow_oval; 
+  }
+}
+.icon_star {
+  &:before {
+    content: $icon_star; 
+  }
+}
+.icon_flaf_left {
+  &:before {
+    content: $icon_flaf_left; 
+  }
+}
+.icon_flag_right {
+  &:before {
+    content: $icon_flag_right; 
+  }
+}
+.icon_location {
+  &:before {
+    content: $icon_location; 
+  }
+}
+.icon_play {
+  &:before {
+    content: $icon_play; 
+  }
+}
+.icon_error {
+  &:before {
+    content: $icon_error; 
+  }
+}
+.icon_discont {
+  &:before {
+    content: $icon_discont; 
+  }
+}
+.icon_clock {
+  &:before {
+    content: $icon_clock; 
+  }
+}
+.icon_phone {
+  &:before {
+    content: $icon_phone; 
+  }
+}
+.icon_telegram {
+  &:before {
+    content: $icon_telegram; 
+  }
+}
+.icon_vk {
+  &:before {
+    content: $icon_vk; 
+  }
+}
+
