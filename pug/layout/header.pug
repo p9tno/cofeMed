@@ -1,25 +1,55 @@
 header.header
-    .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+    .header__top
+        .container_center
+            .header__content
+                .header__toggle
 
-        .header__toggle
+                    .toggle__icon.circle
+                        i.icon_toggle
+                    .toggle__label.desktop
+                        span Меню
 
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+                .header__logo
+                    a.logo(href="/")
+                        img(src="/img/logo.png")
+                    .logo__label.desktop
+                        span Лицензированный центр<br> эстетической ﻿медицины<br> в г. Чебоксары
+
+                .header__phone
+                    a(href="tel:+7 (8352) 28-51-19").phone
+                        .phone__icon.circle
+                            i.icon_phone
+                        .phone__content.desktop
+                            .phone__number
+                                span +7 (8352) 28-51-19
+                            .phone__label
+                                span Ежедневно: 09:00-20:00
+
+
+
+                .header__action.desktop
+                    a(href="#") Заказать обратный звонок
+                    a(href="#") Связаться в WhatsApp
+
+
+    .header__bottom
+        .header__nav.bg
+            .container_center
+                nav.navbar#navbar
+                    ul.menu
+                        li.menu-item.current-menu-item
+                            a(href="#") Главная
+                        li.menu-item
+                            a(href="#") Обучение в академии
+                        li.menu-item
+                            a(href="#") Косметология
+                        li.menu-item
+                            a(href="#") Акции
+                        li.menu-item
+                            a(href="#") Пластическая хирургия
+                        li.menu-item
+                            a(href="#") Сотрудники
+                        li.menu-item
+                            a(href="#") Реабилитация
+                        li.menu-item
+                            a(href="#") Контакты

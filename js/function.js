@@ -42,10 +42,9 @@ $(document).ready(function() {
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
-            $('.header__toggle').toggleClass('header__toggle_open');
-            $('.nav_open_bg').toggleClass('nav_open_bg_open');
-            $( 'body' ).toggleClass( 'nav-open' );
+            $('.header__nav').toggleClass('active');
+            $('.toggle__icon').toggleClass('active');
+            // $( 'body' ).toggleClass( 'nav-open' );
         });
     };
     openMobileNav();
@@ -230,7 +229,5 @@ $(document).ready(function() {
 
 
 
-    
+
 })
-
-
