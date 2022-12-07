@@ -1,14 +1,214 @@
-/* Footer
- ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	background-color: $color_white;
+	border-top-left-radius: 3.75em;
+	border-top-right-radius: 3.75em;
+	padding: 1.875em 1.875em 2.125em 2.5em;
+	@media (min-width: 768px) {
+		padding: 3.125em 0 2.5em;
+	}
 
 	&__content {
-		@extend .container_center;
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__left {
+		@media (min-width: 768px) {
+			width: 18.125em;
+		}
+	}
+
+	&__row {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__logo {
+		.logo {
+			display: block;
+			width: 6.4375em;
+			height: 5.625em;
+			font-size: 0.6112em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__desc {
+		letter-spacing: 0.02em;
+		line-height: 1.5;
+		margin-left: 1.375em;
+		@media (min-width: 768px) {
+			margin-left: 1.75em;
+
+		}
+
+		span {
+			display: block;
+			font-weight: 500;
+			font-size: 0.5em;
+			@media (min-width: 768px) {
+				font-size: 0.6875em;
+
+			}
+
+			&:nth-child(2) {
+				margin-top: 1em;
+
+				@media (min-width: 768px) {
+					font-size: 0.625em;
+				}
+			}
+		}
+
+		br {
+			display: none;
+			@media (min-width: 768px) {
+				display: inline;
+			}
+		}
+	}
+
+	&__reference {
+		margin-top: 1.5em;
+		letter-spacing: 0.02em;
+		line-height: 0.96;
+
+		span {
+			font-size: 0.625em;
+			color: #8D8D8D;
+		}
+
+	}
+
+	&__label {
+		margin-bottom: 0.875em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.25em;
+
+		}
+
+		span {
+			font-weight: 600;
+			font-size: 0.875em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+
+			}
+		}
+	}
+
+	&__nav {
+		margin: 1.625em 0;
+		@media (min-width: 768px) {
+			margin: 0;
+			width: 20.5em;
+		}
+
+		.menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1.5em;
+			grid-row-gap: 0.25em;
+
+			@media (min-width: 768px) {
+				grid-column-gap: 3em;
+				grid-row-gap: 0.5em;
+
+			}
+
+		}
+
+		.menu-item {
+			a {
+				font-weight: 400;
+				color: #938478;
+
+				font-size: 0.625em;
+				@media (min-width: 768px) {
+					font-size: 0.75em;
+
+				}
+			}
+		}
+	}
+
+	&__right {
+		@media (min-width: 768px) {
+			width: 17em;
+		}
+	}
+
+	&__info {
+		@media (min-width: 768px) {
+			line-height: 1.5;
+
+		}
+
+		li {
+			margin-bottom: 0.625em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a,
+		span {
+			font-weight: 600;
+			color: $main_color;
+			font-size: 0.75em;
+			@media (min-width: 768px) {
+				font-size: 0.875em;
+
+			}
+		}
+	}
+
+	&__action {
+		margin-top: 1.625em;
+		/* 26/16 */
+		@media (min-width: 768px) {
+			margin-top: 1.25em;
+
+		}
+
+		li {
+			line-height: 1;
+			margin-bottom: 0.5em;
+			@media (min-width: 768px) {
+				margin-bottom: 0.625em;
+
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			font-weight: 600;
+			color: #938478;
+
+			font-size: 0.625em;
+			@media (min-width: 768px) {
+				font-size: 0.75em;
+
+			}
+		}
+	}
+
 }

@@ -12,3 +12,10 @@
 @include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-Bold', bold, normal);
 @include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-ExtraBold', 800, normal);
 @include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-Black', 900, normal);
+
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-BlackItalic', 900, italic);
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-BoldItalic', bold, italic);
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-ExtraBoldItalic', 800, italic);
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-MediumItalic', 500, italic);
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-SemiBoldItalic', 600, italic);
+@include font-face("Playfair Display", '../fonts/playfair/PlayfairDisplay-Italic', normal, italic);

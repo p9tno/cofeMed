@@ -1,0 +1,45 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin firstscreen
+    section#firstscreen.firstscreen.section
+        .firstscreen__bg.bg(style="background-image: url('../../img/firstscreen_bg.png')")
+            .container_center
+                h1.section__title.desktop
+                    span <i>Комплексный подход к сохранению </i><br> вашей красоты и молодости
+                .firstscreen__desc.desktop
+                    span Команда «КофеМед» поможет вам предупредить появление возрастных<br> изменений и исправить их, а также сохранить красоту на многие годы
+
+                //- content mobile
+                h1.section__title.mobile
+                    span <i>Комплексный<br> подход к сохранению </i><br>вашей красоты<br> и молодости
+                .firstscreen__desc.mobile
+                    span Команда «КофеМед» поможет вам<br> предупредить появление возрастных<br>  изменений и исправить их, а также<br> сохранить красоту на многие годы
+
+                .firstscreen__img.img.mobile
+                    img(src="../../img/firstscreen_img.png")
+                //- content mobile
+        .container_center
+            .firstscreen__list
+                .firstscreen__item
+                    .firstscreen__mask
+                    .firstscreen__content
+                        .firstscreen__label
+                            span Косметология
+                        p Лучшие препараты и оборудование для безоперационной коррекции лица и тела
+                .firstscreen__item
+                    .firstscreen__content
+                        .firstscreen__label
+                            span Пластическая хирургия
+                        p Эстетическая и реконструктивная хирургия для желаемых изменений во внешности
+                .firstscreen__item.firstscreen__item_reverse
+                    .firstscreen__mask.desktop
+                    .firstscreen__content
+                        .firstscreen__label
+                            span Обучение
+                        p Повышение квалификации для косметологов и специалистов со всех городов России
+
+    // end firstscreen
