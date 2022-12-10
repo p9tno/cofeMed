@@ -1,0 +1,167 @@
+.giftCertificates {
+    position: relative;
+
+    .elipse {
+        bottom: 0;
+        left: 2em;
+
+        @media (min-width: 768px) {
+            bottom: -7em;
+            left: 25em;
+        }
+    }
+
+    .section__title {
+        @media (max-width: 767px) {
+            text-align: center;
+
+            span {
+                font-size: 2.5em;
+            }
+
+        }
+
+    }
+
+    &__content {
+        background-image: url("../img/certificates_bg_m.png");
+        padding: 2.75em 0.625em 1.75em;
+
+        @media (min-width: 768px) {
+            padding: 6.875em 12.5em 12.25em;
+            position: relative;
+            overflow: hidden;
+            background-image: url("../img/certificates_bg.png");
+
+        }
+    }
+
+    &__text {
+        margin-top: 1.625em;
+        margin-bottom: 27.5em;
+        line-height: 1.5;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            position: relative;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            line-height: 1.7;
+            text-align: left;
+            padding-left: 2.875em;
+        }
+
+        span {
+            color: #5B5B5B;
+            font-weight: 500;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+
+        }
+
+        br {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .crumbs {
+                position: absolute;
+                top: 0.75em;
+                left: 0;
+            }
+
+        }
+
+    }
+
+    &__action {
+        position: relative;
+
+        background-color: rgba($color_white, 0.6);
+        border-radius: 0.4375em;
+
+        line-height: 1.7;
+
+        margin: 0 -0.625em 1.25em;
+        padding: 2.8125em 1.375em 1.5em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            margin: 0 0 3.75em;
+            padding: 1.5625em 2.375em;
+            text-align: left;
+            width: 35.875em;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 0.875em;
+            color: #5B5B5B;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+
+            a {
+                font-weight: 700;
+                font-size: 1em;
+                color: #5B5B5B;
+            }
+        }
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: -1.75em;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 1em;
+
+        @media (min-width: 768px) {
+            top: 50%;
+            transform: translate(0, -50%);
+            left: -2.25em;
+
+        }
+
+    }
+
+    &__btn {
+        @media (max-width: 767px) {
+            font-size: 0.98em;
+            max-width: 100%;
+        }
+    }
+
+    &__img {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: -1em;
+            right: -3em;
+            width: 49.6875em;
+            height: 49.6875em;
+            background-image: url("../img/certificates.png");
+        }
+    }
+
+    &__flower {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 28.75em;
+            right: 22.5em;
+            width: 28.3125em;
+            height: 16.25em;
+            background-image: url("../img/flower.png");
+
+        }
+    }
+
+}

@@ -1,0 +1,102 @@
+.benefits {
+    .section__title {
+        margin-bottom: 2.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 6.25em;
+        }
+
+        span {
+            @media (min-width: 768px) {
+                font-size: 3.125em;
+
+                &:last-child {
+                    display: block;
+                    text-align: right;
+                }
+            }
+
+        }
+
+    }
+
+    &__grid {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 28.75em 41.25em;
+            grid-auto-rows: minmax(26.5em, auto);
+            grid-column-gap: 2.5em;
+            grid-row-gap: 2em;
+
+            .benefits__item {
+                &:first-child {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+
+                    .benefits__bg {
+                        height: 39.125em;
+                        // padding-bottom: 39.125em;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__item {
+        // border: 1px solid #000;
+        background-color: $color_white;
+
+    }
+
+    &__bg {
+        display: flex;
+        align-items: flex-end;
+        height: 15.125em;
+        padding: 1.25em 3.75em;
+
+    }
+
+    &__number {
+        span {
+            font-family: $second_font_family;
+            font-style: italic;
+            color: $color_white;
+            font-weight: 700;
+            font-size: 3em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+        }
+
+        i {
+            font-family: $second_font_family;
+            font-style: italic;
+            font-size: 3em;
+            font-weight: 100;
+            margin-right: 0.014em;
+            color: $color_primary;
+            text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    &__content {}
+
+    &__title {}
+
+    &__text {}
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}
+
+.counter-wrap {}
+
+.counter-item {}
+
+.bg {}
+
+.counter-el {}

@@ -1,0 +1,11 @@
+.benefits .section__title span {
+  color: red;
+}
+@media (min-width: 768px) {
+  .benefits .section__title span {
+    font-size: 3.125em;
+  }
+}
+.benefits .section__title:nth-child(2) {
+  color: red;
+}

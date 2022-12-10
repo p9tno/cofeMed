@@ -2,7 +2,7 @@ extends layout/layout.pug
 
 block content
     // begin testingNaw
-    section#testingNaw.testingNaw.section
+    section#testingNaw.testingNaw.section(style="padding-top:15em;")
         .container_center
             h2.section__title
                 span НАВИГАЦИЯ
@@ -29,29 +29,30 @@ block content
 
     //- // end testingNaw
 
-    //- // begin testButton
-    //- section#testButton.testButton.section
-    //-     .container_center
-    //-         h2.section__title 
-    //-             span Кнопки
-    //-         br
-    //-         .testButton__content
-    //-             a.btn(href="#") 
-    //-                 span Подробее о компании
-    //-             br
-    //-             br
-    //-             a.btn.btn_arrow(href="#") 
-    //-                 span Заказать проект
-    //-             br
-    //-             br
-    //-             a.btn.btn_arrow.btn_bg(href="#") 
-    //-                 span Заказать проект
-    //-             br
-    //-             br
-    //-             a.btn.btn_callback.btn_bg(href="#") 
-    //-                 span Заказать звонок
-    //-             br
-    //-             br
+    // begin testButton
+    section#testButton.testButton.section
+        .container_center
+            h2.section__title 
+                span Кнопки
+            br
+            .testButton__content
+                a.btn(href="#") купить сертификат
+
+                br
+                br
+                .link_arrow
+                    a(href="#") купить сертификат
+
+                //- br
+                //- br
+                //- a.btn.btn_arrow.btn_bg(href="#") 
+                //-     span Заказать проект
+                //- br
+                //- br
+                //- a.btn.btn_callback.btn_bg(href="#") 
+                //-     span Заказать звонок
+                //- br
+                //- br
 
 
     //- // end testButton

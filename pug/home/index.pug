@@ -8,20 +8,20 @@ block content
     section#firstscreen.firstscreen.section
         .firstscreen__bg.bg(style="background-image: url('../../img/firstscreen_bg.png')")
             .container_center
-                h1.section__title.desktop
+                h1.section__title.section__title_lg.desktop
                     span <i>Комплексный подход к сохранению </i><br> вашей красоты и молодости
                 .firstscreen__desc.desktop
                     span Команда «КофеМед» поможет вам предупредить появление возрастных<br> изменений и исправить их, а также сохранить красоту на многие годы
 
                 //- content mobile
-                h1.section__title.mobile
+                h1.section__title.section__title_lg.mobile
                     span <i>Комплексный<br> подход к сохранению </i><br>вашей красоты<br> и молодости
                 .firstscreen__desc.mobile
                     span Команда «КофеМед» поможет вам<br> предупредить появление возрастных<br>  изменений и исправить их, а также<br> сохранить красоту на многие годы
 
                 .firstscreen__img.img.mobile
                     img(src="../../img/firstscreen_img.png")
-                //- content mobile
+                //- end content mobile
         .container_center
             .firstscreen__list
                 .firstscreen__item
@@ -43,3 +43,154 @@ block content
                         p Повышение квалификации для косметологов и специалистов со всех городов России
 
     // end firstscreen
+
+    // begin deals
+    section#deals.deals.section
+        .container_center
+            .deals__top
+                .deals__caption
+                    .section__star.star
+                        i.icon_star
+                    h2.section__title
+                        span <i>Самые выгодные</i><br> предложения сентября
+
+                .deals__arrows.custom_arrows.desktop
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+            .deals__bottom
+                .deals__wrap
+                    .swiper.deals-swiper-js
+                        .swiper-wrapper
+                            each item in [1,2,1,2,1,2]
+                                .swiper-slide
+                                    .deals__slide
+                                        .deals__bg.bg(style="background-image: url('../../img/deals_"+item+".jpg')")
+                                        .deals__content
+                                            .deals__star.star.star_sm.star_light
+                                                i.icon_star
+                                            .deals__title
+                                                span Здесь заголовок <br> в две строки
+                                            .deals__text
+                                                span На комплекс аппаратных процедур SMAS-лифтинг Liftera + микроигольчатый RF-лифтинг Infini
+                                            .deals__link.link_arrow
+                                                a(href="#") Подробнее об акции
+
+                .deals__dotted.mobile
+
+
+
+
+    // end deals
+
+    // begin giftCertificates
+    section#giftCertificates.giftCertificates.section
+        .container_center.container_center_lg
+            .giftCertificates__content.bg
+                h2.section__title
+                    span <i>Подарочные</i> сертификаты
+                .giftCertificates__text
+                    .crumbs.desktop
+                        span.crumb
+                        span.crumb
+                        span.crumb
+                    span Теперь можно подарить своим близким молодость <br> и красоту: на ваш выбор красивые подарочные сертификаты в<br> медицинский центр «КофеМед» на любую сумму
+                .giftCertificates__action
+                    .giftCertificates__icon.circle
+                        i.icon_phone
+                    span.desktop Чтобы узнать подробности, звоните +7 (8352) 28-51-19,<br><a href="#"> пишите нам в WhatsApp</a> или <a href="#">закажите обратный звонок</a>
+
+                    //- content mobile
+                    span.mobile Чтобы узнать подробности, звоните<br> +7 (8352) 28-51-19,<a href="#"> пишите нам в WhatsApp</a><br> или <a href="#">закажите обратный звонок</a>
+                    //- end content mobile
+
+                .giftCertificates__btn
+                    a.btn(href="#") купить сертификат
+
+                .giftCertificates__flower.bg.desktop
+                .giftCertificates__img.bg.desktop
+        .elipse
+
+
+    // end giftCertificates
+
+    // begin services {title: '', text: '', bg: '',link: ''} Обеспечим вам желаемый результат и высокопрофессиональное сопровождение до, во время и после операции
+    section#services.services.section
+        each item in [ {title: 'Косметология', text: 'Предоставляем услуги эстетической,<br> аппаратной, инъекционной косметолонии, контурной пластики и нитевого лифтинга', bg: '1',link: 'Подробнее обо всех процедурах'}, {title: 'Пластическая хирургия', text: 'Обеспечим вам желаемый результат высокопрофессиональное<br> сопровождение до, во время и после операции', bg: '2',link: 'Подробнее о всех операциях'}, {title: 'Реабилитация после пластических <br> операций и косметологических процедур', text: 'Помогаем максимально ускорить процесс восстановления лица ﻿и тела', bg: '3',link: 'Подробнее о процедурах реабилитации'}]
+
+            .services__item
+                .container_center
+                    .services__caption
+                        h2.section__title
+                            span!=item.title
+                        .services__text
+                            span!=item.text
+                    .services__bg.bg.desktop(style="background-image: url('../../img/services_"+item.bg+".jpg')")
+                        .services__wrap
+                            .services__btn
+                                a.btn(href="#")!=item.link 
+
+                    .services__bg.bg.mobile(style="background-image: url('../../img/services_m_"+item.bg+".jpg')")
+                        .services__wrap
+                            .services__link.link_arrow
+                                a(href="#")!=item.link 
+
+        .services__item
+            .container_center
+                .services__caption
+                    h2.section__title
+                        span Терапия
+                    .services__text
+                        span Забор анализов и лабораторные исследования
+
+
+                .services__bg.bg.desktop(style="background-image: url('../../img/services_4.jpg')")
+                    .services__wrap
+                        .services__btn
+                            a.btn(href="#") Подробнее
+                        .services__cooperate
+                            .cooperate
+                                .cooperate__logo
+                                    img(src="../../img/cooperate_logo.svg")
+                                .cooperate__title
+                                    span Мы сотрудничаем с лабораторией «Инвитро»
+                                .cooperate__text
+                                    span Пациенты, сдающие комплекс анализов для пластической<br> операции у нашего хирурга, получают ﻿скидку 10%
+
+                .services__bg.bg.mobile(style="background-image: url('../../img/services_m_4.jpg')")
+                    .services__wrap
+                        .services__link.link_arrow
+                            a(href="#") Подробнее
+
+                .cooperate.mobile
+                    .cooperate__logo
+                        img(src="../../img/cooperate_logo.svg")
+                    .cooperate__title
+                        span Мы сотрудничаем с лабораторией «Инвитро»
+                    .cooperate__text
+                        span Пациенты, сдающие комплекс анализов для пластической  операции у нашего хирурга, получают ﻿скидку 10%
+
+
+
+    // end services
+
+    // begin benefits
+    section#benefits.benefits.section
+        .container_center
+            h2.section__title
+                span <i>«КофеМед» — это не просто центр красоты,</i> а экспертная клиника эстетической
+                span медицины и врачебной косметологии
+            .benefits__grid.counter-wrap
+                each item in [ { bg: '1', title: 'Профессиональная команда', text: 'В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием' }, { bg: '2', title: 'Ответственность и безопасность', text: 'Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур' }, { bg: '3', title: 'Современное оборудование и лучшие препараты', text: 'Например, один из 4-х официально зарегистрированных в РФ аппаратов для SMAS-лифтинга Liftera находится именно у нас' }, ]
+                    .benefits__item.counter-item
+                        .benefits__bg.bg(style="background-image: url('../../img/benefits_"+item.bg+".jpg')")
+                            .benefits__number
+                                i / 
+                                span.counter-el
+                        .benefits__content
+                            .benefits__title
+                                span!=item.title
+                            .benefits__text
+                                span!=item.text
+
+    // end benefits
