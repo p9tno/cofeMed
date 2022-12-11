@@ -26,6 +26,7 @@ function submitForm() {
 
         // Поиск потомков внутри каждого элемента в текущем наборе ОБЯЗАТЕЛЬНЫЕ ПОЛЯ!!!
         let fields = form.find('[required]');
+        let error_rows = form.find('.form__row_error');
 
         // Записываем значение атрибута формы action
         let url = form.attr('action');
@@ -33,7 +34,7 @@ function submitForm() {
         // Записываем значения полей форм. Обязателен атрибут name у полей с уникальным значением
         let formData = form.serialize();
 
-        
+
 
         // для счетчика (колличесто не заполненых полей)
         let empty = 0;
@@ -44,14 +45,17 @@ function submitForm() {
             // проверка заполнения полей. val - Метод позволяет получать и изменять значения элементов форм
             if ($(this).val() === '') {
                 $(this).addClass('invalid');
+                $(this).parent().addClass('invalid');
                 empty++;
             } else {
                 $(this).removeClass('invalid');
+                $(this).parent().removeClass('invalid');
             }
         });
 
         setTimeout(function () {
             fields.removeClass('invalid');
+            error_rows.removeClass('invalid');
         }, 1500);
 
 

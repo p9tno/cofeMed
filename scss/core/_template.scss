@@ -295,6 +295,10 @@ body {
 	gap: 0.4375em;
 	align-items: center;
 
+	&_col {
+		flex-direction: column;
+	}
+
 	.crumb {
 		width: 0.25em;
 		height: 0.25em;

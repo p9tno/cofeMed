@@ -130,6 +130,14 @@
 				&:first-child {
 					margin-bottom: 0.375em;
 				}
+
+				&:hover {
+					color: #CCBDB2;
+				}
+
+				&:active {
+					color: #B5A79D;
+				}
 			}
 
 		}

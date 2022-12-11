@@ -1,0 +1,142 @@
+.bottom {
+    .section__title {
+        color: $color_white;
+        margin-bottom: 2.875em;
+        text-align: center;
+        @media (max-width: 767px) {
+            margin-bottom: 2.5em;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: 2.375em;
+            }
+        }
+
+    }
+
+    &__bg {
+        overflow: hidden;
+        background-image: url("../img/bottom_bg_m.jpg");
+        @media (min-width: 768px) {
+            background-image: url("../img/bottom_bg.jpg");
+
+        }
+    }
+
+    &__content {
+        color: $color_white;
+        padding: 3.46em 1.125em;
+
+        @media (min-width: 768px) {
+            position: relative;
+            padding: 4.375em 0;
+
+        }
+    }
+
+    &__info {}
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+            margin-bottom: 1.875em;
+        }
+    }
+
+    &__icon {
+        font-size: 1em;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        margin-left: 1.25em;
+
+        b {
+            font-weight: 700;
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+
+        a {
+            color: $color_white;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+                color: #CCBDB2;
+            }
+
+            &:active {
+                color: #B5A79D;
+            }
+        }
+
+        br {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline;
+            }
+        }
+    }
+
+    &__video {
+        position: relative;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: 58px;
+            right: 0;
+        }
+
+        .play {
+            margin: 0 auto 3.125em;
+            @media (min-width: 768px) {
+                margin: 0;
+            }
+        }
+
+        .pulse {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media (max-width: 767px) {
+                span {
+                    &:nth-child(1) {
+                        width: 29.6875em;
+                        height: 29.6875em;
+                    }
+
+                    &:nth-child(2) {
+                        width: 45em;
+                        height: 45em;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

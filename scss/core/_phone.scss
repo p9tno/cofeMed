@@ -4,7 +4,14 @@
     display: flex;
     align-items: center;
 
-    &__icon {}
+    &__icon {
+        transition: 0.3s;
+
+        &:after {
+            transition: 0.3s;
+
+        }
+    }
 
     &__content {
         color: $color_white;
@@ -25,6 +32,23 @@
         span {
             font-weight: 500;
             font-size: 1em;
+        }
+    }
+
+    &:hover {
+        .phone__icon {
+            background-color: #CCBDB2;
+
+            &:after {
+                background-color: $color_white;
+
+            }
+        }
+    }
+
+    &:active {
+        .phone__icon {
+            background-color: #B5A79D;
         }
     }
 

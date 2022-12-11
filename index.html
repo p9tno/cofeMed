@@ -11,6 +11,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
+    <div class="preloader__wrap" id="preloader">
+      <div class="preloader"><div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+      </div>
+    </div>
     <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="header__top">
@@ -29,7 +41,7 @@
                     <div class="phone__number"><span>+7 (8352) 28-51-19</span></div>
                     <div class="phone__label"><span>Ежедневно: 09:00-20:00</span></div>
                   </div></a></div>
-              <div class="header__action desktop"><a href="#">Заказать обратный звонок</a><a href="#">Связаться в WhatsApp</a></div>
+              <div class="header__action desktop"><a href="#returncall">Заказать обратный звонок</a><a href="https://wa.me/+78352285119" target="_blank">Связаться в WhatsApp</a></div>
             </div>
           </div>
         </div>
@@ -72,6 +84,12 @@
           </div>
         </section>
         <!-- begin tetsNodal-->
+        <section class="tetsNodal section" id="tetsNodal">
+          <div class="container_center">
+            <h2 class="section__title"><span>Модальные окна</span></h2>
+            <div class="tetsNodal__content" style="font-size:1.25em;"><a class="btn show_js" href="#returncall">заказать звонок</a><br/><br/><br/><a class="btn youtubeModal-js" id="rsDoGqnPE4c" href="#modalVideo">ролик</a></div>
+          </div>
+        </section>
         <!-- end tetsNodal-->
         <!-- begin first-->
         <section class="first section" id="first">
@@ -122,6 +140,42 @@
           </div>
         </div>
       </footer>
+      <!-- Begin Modal modalVideo-->
+      <div class="modal fade modalVideo" id="modalVideo">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon_error"></i></a>
+            <div class="modal-body"> 
+              <div class="modalVideo__wraper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalVideo-->
+      <!-- Begin Modal returncall-->
+      <div class="modal fade returncall" id="returncall">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon_error"></i></a>
+            <div class="modal-body"> 
+              <div class="modal-caption">
+                <div class="section__title"><span><i>Закажите обратный<br> звонок администратора</i></span></div>
+                <div class="crumbs"><span class="crumb"></span><span class="crumb"></span><span class="crumb"></span></div>
+                <div class="modal-label"><span>Оставьте свой номер и мы свяжемся с вами в ближайшее время</span></div>
+              </div>
+              <div class="modal-form">
+                <form class="form form_grid">
+                  <div class="form__row form__row_error">
+                    <input class="tel" type="tel" required="required" placeholder="+ 7 ( 000 ) 000-00-00"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn" type="submit"><span>заказать звонок</span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal returncall-->
       <script src="js/jquery.js"></script>
       <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/modal.js"></script>

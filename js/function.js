@@ -38,6 +38,23 @@ function isTouch() {
 
 $(document).ready(function() {
 
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    preloader();
+    // setTimeout( ()=> preloader(),15000 )
+
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
@@ -58,6 +75,8 @@ $(document).ready(function() {
         });
     }
     showModal();
+
+
 
     // $('.modal').on('show.bs.modal', () => {
     //     let openedModal = $('.modal.in:not(.popapCalc)');
@@ -129,26 +148,18 @@ $(document).ready(function() {
 
 
 
-    // Видео youtube для страницы
-    function uploadYoutubeVideo() {
-        if ( $( ".js-youtube" ) ) {
+    function uploadYoutubeVideoForModal() {
+        if ( $( ".youtubeModal-js" ) ) {
 
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
+            $( '.youtubeModal-js' ).on( 'click', function () {
+                $('#modalVideo').modal('show');
 
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
+                let wrapp = $( this ).closest( '.youtubeModal-js' );
+                let videoId = wrapp.attr( 'id' );
+                let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
 
-            } );
-
-            $( '.video__play, .video__prev' ).on( 'click', function () {
-                // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.js-youtube' ),
-                    videoId = wrapp.attr( 'id' ),
-                    iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-                if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
+                // доп параметры для видоса
+                // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
 
                 // Высота и ширина iframe должны быть такими же, как и у родительского блока
                 let iframe = $( '<iframe/>', {
@@ -156,44 +167,45 @@ $(document).ready(function() {
                     'src': iframe_url,
                     'allow': "autoplay"
                 } )
+                $(".modalVideo__wraper").append(iframe);
 
-                // Заменяем миниатюру HTML5 плеером с YouTube
-                $( this ).closest( '.video__wrapper' ).append( iframe );
+                $("#modalVideo").on('hide.bs.modal', function () {
+                    $(".modalVideo__wraper").html('');
+                });
 
             } );
         }
     };
-
-    uploadYoutubeVideo();
+    uploadYoutubeVideoForModal();
 
 
     $(function(){
-        $(".tel").mask("8 (999) 999 9999");
+        $(".tel").mask("+ 7 (999) 999-99-99");
     });
 
     // scrollTop
-    $(document).ready(function(){
-        //отменяем стандартную обработку нажатия по ссылке
-        $(".toTop").on("click","a", function (event) {
-            event.preventDefault();
-            //забираем идентификатор блока с атрибута href
-            let id  = $(this).attr('href'),
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top;
-            //анимируем переход на расстояние - top за 1500 мс
-            $('body,html').animate({scrollTop: top}, 1500);
-        });
-    });
-
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
-        });
-    });
+    // $(document).ready(function(){
+    //     //отменяем стандартную обработку нажатия по ссылке
+    //     $(".toTop").on("click","a", function (event) {
+    //         event.preventDefault();
+    //         //забираем идентификатор блока с атрибута href
+    //         let id  = $(this).attr('href'),
+    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
+    //         top = $(id).offset().top;
+    //         //анимируем переход на расстояние - top за 1500 мс
+    //         $('body,html').animate({scrollTop: top}, 1500);
+    //     });
+    // });
+    //
+    // $(document).ready(function(){
+    //     $(window).scroll(function(){
+    //         if($(window).scrollTop()>500){
+    //             $('.toTop').fadeIn(900)
+    //         }else{
+    //             $('.toTop').fadeOut(700)
+    //         }
+    //     });
+    // });
 
     // end scrollTop
 
@@ -222,6 +234,23 @@ $(document).ready(function() {
     //         /* код */
     //     }
     // });
+
+
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
 
 

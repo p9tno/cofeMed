@@ -49,7 +49,7 @@ block content
         .container_center
             .deals__top
                 .deals__caption
-                    .section__star.star
+                    .section__star.star(data-aos="flip-left")
                         i.icon_star
                     h2.section__title
                         span <i>Самые выгодные</i><br> предложения сентября
@@ -67,7 +67,7 @@ block content
                                     .deals__slide
                                         .deals__bg.bg(style="background-image: url('../../img/deals_"+item+".jpg')")
                                         .deals__content
-                                            .deals__star.star.star_sm.star_light
+                                            .deals__star.star.star_sm.star_light(data-aos="flip-left")
                                                 i.icon_star
                                             .deals__title
                                                 span Здесь заголовок <br> в две строки
@@ -107,8 +107,8 @@ block content
                 .giftCertificates__btn
                     a.btn(href="#") купить сертификат
 
-                .giftCertificates__flower.bg.desktop
-                .giftCertificates__img.bg.desktop
+                .giftCertificates__flower.bg.desktop(data-aos="fade-left" data-aos-delay="400")
+                .giftCertificates__img.bg.desktop(data-aos="fade-left" data-aos-delay="600")
         .elipse
 
 
@@ -176,12 +176,17 @@ block content
 
     // begin benefits
     section#benefits.benefits.section
+        .crumbs.crumbs_col.mobile
+            span.crumb
+            span.crumb
+            span.crumb
+        .elipse.desktop
         .container_center
             h2.section__title
                 span <i>«КофеМед» — это не просто центр красоты,</i> а экспертная клиника эстетической
                 span медицины и врачебной косметологии
             .benefits__grid.counter-wrap
-                each item in [ { bg: '1', title: 'Профессиональная команда', text: 'В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием' }, { bg: '2', title: 'Ответственность и безопасность', text: 'Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур' }, { bg: '3', title: 'Современное оборудование и лучшие препараты', text: 'Например, один из 4-х официально зарегистрированных в РФ аппаратов для SMAS-лифтинга Liftera находится именно у нас' }, ]
+                each item in [ { bg: '1', title: 'Профессиональная команда', text: 'В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием' }, { bg: '2', title: 'Ответственность и безопасность', text: 'Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур' }, { bg: '3', title: 'Современное оборудование<br> и лучшие препараты', text: 'Например, один из 4-х официально зарегистрированных в РФ<br> аппаратов для SMAS-лифтинга Liftera находится именно у нас' }, ]
                     .benefits__item.counter-item
                         .benefits__bg.bg(style="background-image: url('../../img/benefits_"+item.bg+".jpg')")
                             .benefits__number
@@ -194,3 +199,41 @@ block content
                                 span!=item.text
 
     // end benefits
+
+    // begin bottom
+    section#bottom.bottom.section
+        .container_center.container_center_xl
+            .bottom__bg.bg
+                .container_center
+                    .bottom__content
+                        h2.section__title
+                            span <i>Будем рады видеть вас</i><br> в числе наших клиентов
+                        .bottom__video
+                            .play.youtubeModal-js#rsDoGqnPE4c
+                                .play__content
+                                    .play__icon
+                                        i.icon_play
+                                    .play__label
+                                        span видео <br> о клинике
+
+                            .pulse
+                                span
+                                span
+                                span.desktop
+                        .bottom__info
+                            .bottom__item
+                                .bottom__icon.circle(data-aos="fade-right" data-aos-delay="400")
+                                    i.icon_phone
+                                .bottom__text
+                                    b Телефон: <a href="tel:8 (8352) 28-51-19">8 (8352) 28-51-19</a>
+                                    span с 9:00 до 20:00 (ежедневно)
+
+                            .bottom__item
+                                .bottom__icon.circle(data-aos="fade-right" data-aos-delay="600")
+                                    i.icon_location
+                                .bottom__text
+                                    b Адрес:
+                                    span Чувашская Республика, г. Чебоксары,<br> ул. Гражданская, дом 5, помещение 14
+
+
+    // end bottom

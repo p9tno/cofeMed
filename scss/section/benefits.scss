@@ -1,11 +1,18 @@
 .benefits {
+    @media (min-width: 768px) {
+        position: relative;
+    }
+
     .section__title {
+        text-align: center;
         margin-bottom: 2.5em;
         @media (min-width: 768px) {
+            text-align: left;
             margin-bottom: 6.25em;
         }
 
         span {
+            font-size: 1.5em;
             @media (min-width: 768px) {
                 font-size: 3.125em;
 
@@ -19,6 +26,17 @@
 
     }
 
+    .elipse {
+        @media (min-width: 768px) {
+            top: -5em;
+            left: -9em;
+        }
+    }
+
+    .crumbs {
+        margin-bottom: 1.25em;
+    }
+
     &__grid {
         @media (min-width: 768px) {
             display: grid;
@@ -29,13 +47,32 @@
 
             .benefits__item {
                 &:first-child {
+                    border-radius: 2.5em 0 0 2.5em;
                     grid-row-start: 1;
                     grid-row-end: 3;
 
                     .benefits__bg {
                         height: 39.125em;
-                        // padding-bottom: 39.125em;
                     }
+
+                    .benefits__content {
+                        padding-top: 42px;
+                        padding-left: 60px;
+                    }
+
+                    .benefits__text {
+                        span {
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    border-radius: 0 2.5em 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0 0 2.5em 0;
                 }
             }
 
@@ -43,16 +80,37 @@
     }
 
     &__item {
-        // border: 1px solid #000;
+        border-radius: 2.5em 2.5em 0 0;
+        overflow: hidden;
         background-color: $color_white;
+        margin-bottom: 1.25em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 767px) {
+            &:first-child {
+                .benefits__bg {
+                    background-position: top;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
 
     }
 
     &__bg {
         display: flex;
         align-items: flex-end;
-        height: 15.125em;
-        padding: 1.25em 3.75em;
+        height: 14.5625em;
+        padding: 1.25em;
+        @media (min-width: 768px) {
+            height: 15.125em;
+            padding: 1.25em 3.75em;
+        }
 
     }
 
@@ -61,42 +119,66 @@
             font-family: $second_font_family;
             font-style: italic;
             color: $color_white;
-            font-weight: 700;
-            font-size: 3em;
+            font-weight: 600;
             font-feature-settings: 'pnum' on, 'lnum' on;
             text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+            font-size: 2.375em;
+            @media (min-width: 768px) {
+                font-size: 3em;
+
+            }
         }
 
         i {
             font-family: $second_font_family;
             font-style: italic;
-            font-size: 3em;
             font-weight: 100;
             margin-right: 0.014em;
             color: $color_primary;
             text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+            font-size: 2.375em;
+            @media (min-width: 768px) {
+                font-size: 3em;
+
+            }
         }
     }
 
-    &__content {}
+    &__content {
+        padding: 1.5em 2.125em 1.875em;
+        @media (min-width: 768px) {
+            padding: 2.25em 2.5em;
 
-    &__title {}
+        }
+    }
 
-    &__text {}
+    &__title {
+        line-height: 1.4;
+        margin-bottom: 0.875em;
+
+        span {
+            font-weight: 700;
+            font-size: 1.5em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            line-height: 1.7;
+
+        }
+
+        span {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+        }
+    }
 
 }
-
-.section {
-    &__title {}
-
-}
-
-.container_center {}
-
-.counter-wrap {}
-
-.counter-item {}
-
-.bg {}
-
-.counter-el {}

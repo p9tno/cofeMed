@@ -1,25 +1,55 @@
 .form {
 	&_grid {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -1em;
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 1.25em;
 
-		.form__row {
-			margin: 0 1em 2em;
-			width: 100%;
-
-			@media (min-width: 768px) {
-				width: calc(50% - 2em);
-			}
-
-			&_full {
-				width: 100%;
+			.form__row {
+				margin-bottom: 0;
 			}
 		}
+
 	}
 
 	&__row {
 		margin-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_error {
+			position: relative;
+
+			&:after {
+				content: '\e90b';
+				font-family: 'icomoon';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 4em;
+				font-size: 0.375em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 3.125em;
+				height: 3.125em;
+				border-radius: 50%;
+				background-color: $color_danger;
+				color: $color_white;
+				opacity: 0;
+				transition: 0.3s;
+			}
+
+			&.invalid {
+				&:after {
+					opacity: 1;
+
+				}
+			}
+
+		}
 
 		.btn,
 		input:not([type]),
@@ -42,10 +72,6 @@
 
 	}
 
-	&__label {}
-
-	&__grup {}
-
 	&__check {
 		display: flex;
 		align-items: center;
@@ -66,34 +92,33 @@ input[type=tel],
 input[type=text],
 input[type=url],
 textarea {
-	background-color: $input_bg_color;
-	border: 0.0625em solid $input_border_color;
+	background-color: $color_white;
+	background-color: #EDEDED;
+	border: 0;
 	font-family: $main_font_family;
 	color: $input_color;
-	padding: 0.5em 1em;
+	padding: 1.56em 3.75em;
 	outline: none;
 	font-size: 1em;
-	font-weight: 400;
-	border-radius: 0.3125em;
+	font-weight: 700;
+	border-radius: 0.375em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 	transition: 0.3s;
 
-	&:hover {
-		border: 0.0625em solid $input_hover_border_color;
-		background-color: $input_hover_bg_color;
-	}
+	&:hover {}
 
-	&:focus {
-		border: 0.0625em solid $input_focus_border_color;
-		background-color: $input_focus_bg_color;
-	}
+	&:focus {}
 
 	&.invalid {
-		background-color: $input_error_bg_color;
-		border: 0.0625em solid $input_error_border_color;
+		@include placeholder {
+			color: $color_danger;
+		}
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
-		color: $input_placeholder_color;
+		color: #C1C1C1;
+		transition: 0.3s;
 	}
 }
 
