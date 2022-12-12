@@ -2,51 +2,73 @@ extends ../layout/layout.pug
 block variable
     -var path = '../';
     -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
 
 
 block content
     // begin head
-    section#head.head.section
-        .head__top.bg(style="background-image: url('../../img/servicepage_bg_1.jpg')")
+    section#head.head
+        //- mobil content
+        .head__top.bg.mobile(style="background-image: url('../../img/servicepage_bg_m_1.jpg')")
             .container_center
                 .head__wrap
-                    .head__coption
+                    .head__caption
                         h1.head__title
                             span SMAS-лифтинг Liftera
                         .head__desc
-                            span Подтяжка лица и шеи, которая происходит за счет сжигания лишних жировых клеток и стимуляции выработки нового коллагена
-
+                            span Подтяжка лица и шеи, которая происходит за счет сжигания<br> лишних жировых клеток и стимуляции выработки нового коллагена
                     .head__button
                         a(href="#") записаться на прием
-                        //- .pulse
-                        //-     span
-                        //-     span
-                        //-     span
+                        .pulse
+                            span
+                            span
+                            span
+        //- mobil content
 
-        //- .head__bottom
-        //-     .container_center
-        //-         .head__content
-        //-             .head__duplicate
-        //-                 .head__quotes
-        //-                     i.icon_quotes
-        //-                 span SMAS-лифтинг
-        //-             .head__info
-        //-                 span SMAS-лифтинг подойдёт тем, кто хочет заметно подтянуть кожу, но пока не готов воспользоваться услугами пластических хирургов. Эта же процедура поможет укрепить результат от сделанной ранее хирургической подтяжки
-        //-             .head__after
-        //-                 .crumbs.desktop
-        //-                     span.crumb
-        //-                     span.crumb
-        //-                     span.crumb
-        //-                 span После SMAS-лифтинга не остаётся отёков и гематом, вы не почувствуете боли и вам не понадобится наркоз. Результат будет практически мгновенным, а спустя 6−8 недель станет еще заметнее
-        //-         .head__doctor
-        //-             .doctor
-        //-                 .doctor__img
-        //-                 .doctor__info
-        //-                     .doctor__label
-        //-                     .doctor__name
-        //-                         span Саватеева Екатерина<br>Радиславовна
-        //-                     .doctor__status
-        //-                         span Врач-косметолог<br>клиники "Кофемед"
+        .head__top.bg.desktop(style="background-image: url('../../img/servicepage_bg_1.jpg')")
+            .container_center
+                .head__wrap
+                    .head__caption
+                        h1.head__title
+                            span SMAS-лифтинг Liftera
+                        .head__desc
+                            span Подтяжка лица и шеи, которая происходит за счет сжигания<br> лишних жировых клеток и стимуляции выработки нового коллагена
+                    .head__button
+                        a(href="#") записаться на прием
+                        .pulse
+                            span
+                            span
+                            span
+
+
+        .head__bottom
+            .container_center
+                .head__bottom_wrap.bg
+                    .head__content
+                        .head__duplicate
+                            .head__quotes
+                                i.icon_quotes
+                            span SMAS-лифтинг
+                        .head__info
+                            span SMAS-лифтинг подойдёт тем, кто хочет заметно подтянуть кожу, но пока не готов воспользоваться услугами пластических хирургов. Эта же процедура поможет укрепить результат от сделанной ранее хирургической подтяжки
+                        .head__after
+                            .crumbs.desktop
+                                span.crumb
+                                span.crumb
+                                span.crumb
+                            span После SMAS-лифтинга не остаётся отёков и гематом, вы не почувствуете боли и вам не понадобится наркоз. Результат будет практически мгновенным, а спустя 6−8 недель станет еще заметнее
+                    .head__doctor
+                        .doctor
+                            .doctor__bg.bg.desktop(style="background-image: url('../../img/doctor_1.png')")
+                            .doctor__img.mobile
+                                img(src="../../img/doctor_m.png")
+                            .doctor__hexagon.bg(data-aos="fade-up")
+                                .doctor__label.desktop
+                                    img(src="../../img/label.svg", alt="alt")
+                                .doctor__name
+                                    span Саватеева Екатерина<br>Радиславовна
+                                .doctor__status
+                                    span Врач-косметолог<br>клиники "Кофемед"
 
 
     // end head

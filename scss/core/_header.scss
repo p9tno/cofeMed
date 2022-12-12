@@ -7,9 +7,12 @@
 	width: 100%;
 
 	&_opacity {
-		.header__top {
-			background-color: rgba($main_color,0.5);
-			backdrop-filter: blur(61px);
+		@media (min-width: 768px) {
+			.header__top {
+				background-color: rgba($main_color,0.5);
+				backdrop-filter: blur(61px);
+			}
+
 		}
 	}
 

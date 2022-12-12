@@ -2,6 +2,7 @@ block variable
     -var path = '';
     -var page = true;
     -var headerOpasity = '';
+    -var bodyBgColor = '';
 
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ html(lang="en")
 
         link(rel="stylesheet", type="text/css", href=path +"css/style.css")
 
-    body
+    body(class=bodyBgColor)
 
         //- begin preloader
         .preloader__wrap#preloader
