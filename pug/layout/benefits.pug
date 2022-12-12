@@ -1,0 +1,25 @@
+// begin benefits
+section#benefits.benefits.section
+    .crumbs.crumbs_col.mobile
+        span.crumb
+        span.crumb
+        span.crumb
+    .elipse.desktop
+    .container_center
+        h2.section__title
+            span <i>«КофеМед» — это не просто центр красоты,</i> а экспертная клиника эстетической
+            span медицины и врачебной косметологии
+        .benefits__grid.counter-wrap
+            each item in [ { bg: '1', title: 'Профессиональная команда', text: 'В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием' }, { bg: '2', title: 'Ответственность и безопасность', text: 'Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур' }, { bg: '3', title: 'Современное оборудование<br> и лучшие препараты', text: 'Например, один из 4-х официально зарегистрированных в РФ<br> аппаратов для SMAS-лифтинга Liftera находится именно у нас' }, ]
+                .benefits__item.counter-item
+                    .benefits__bg.bg(style="background-image: url('../../img/benefits_"+item.bg+".jpg')")
+                        .benefits__number
+                            i / 
+                            span.counter-el
+                    .benefits__content
+                        .benefits__title
+                            span!=item.title
+                        .benefits__text
+                            span!=item.text
+
+// end benefits

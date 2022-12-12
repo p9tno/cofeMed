@@ -8,6 +8,11 @@ body {
 	font-size: calc(.04444445 * 100vw + 0px);
 
 	background-color: #FAFAFA;
+
+	// &.bg_white {
+	// 	background-color: $color_white;
+	//
+	// }
 	// background-color: red;
 
 	@media (min-width: 768px) {
@@ -66,7 +71,17 @@ body {
 	padding: 1.5625em 0;
 	@media (min-width: 768px) {
 		padding: 3.125em 0;
+	}
 
+	&:first-child {
+		padding-top: 6.25em;
+		@media (min-width: 768px) {
+			padding-top: 12em;
+		}
+	}
+
+	&_bg {
+		padding-top: 0!important;
 	}
 
 	&__title {

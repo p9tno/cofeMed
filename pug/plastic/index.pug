@@ -1,0 +1,125 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin procedures
+    section#procedures.procedures.section
+        .container_center
+            .procedures__caption
+                h1.section__title.section__title_lg
+                    span <i>Пластическая хирургия</i>
+                .procedures__desc
+                    span Обеспечим вам желаемый результат и высокопрофессиональное<br> сопровождение до, во время и после операции
+            .procedures__list.procedures__list_lastfull.counter-wrap
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/plastic_1.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Пластика лица
+                        ul.list
+                            li
+                                a(href="#") Коррекция формы груди
+                            li
+                                a(href="#") Пластика век
+                            li
+                                a(href="#") Подтяжка лица
+                            li
+                                a(href="#") Пластика носа
+                            li
+                                a(href="#") Пластика губ (булхорн)
+                            li
+                                a(href="#") Пластика подбородка
+                            li
+                                a(href="#") Пластика ушей
+
+                //- end .procedures__item
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/plastic_2.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Пластика тела
+                        ul.list
+                            li
+                                a(href="#") Подтяжка живота
+                            li
+                                a(href="#") Эндопротезирование голеней
+                            li
+                                a(href="#") Пластика рубца
+                            li
+                                a(href="#") Пластика малых половых губ
+                            li
+                                a(href="#") Коррекция гинекомастии
+                            li
+                                a(href="#") Липосакция
+
+
+                //- end .procedures__item
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/plastic_3.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Коррекция формы груди
+                        ul.list
+                            li
+                                a(href="#") Увеличение груди
+                            li
+                                a(href="#") Подтяжка груди
+                            li
+                                a(href="#") Уменьшение груди
+                //- end .procedures__item
+
+
+
+
+    // end procedures
+
+    // begin feedback
+    section#feedback.feedback.feedback_plastic.section
+        .container_center
+            .feedback__wrap.bg
+                .feedback__content
+                    h2.section__title
+                        span <i>Есть вопросы</i> <br>по теме операций?
+                    .feedback__action
+                        .feedback__icon.circle(data-aos="fade-right" data-aos-delay="400")
+                            i.icon_phone
+                        .feedback__text
+                            span Звоните +7 (8352) 28-51-19, <a href="https://wa.me/+78352285119" target="_blank">пишите в WhatsApp</a><br> или оставьте ваш номер,чтобы мы вам перезвонили<br> для бесплатной консультации
+                .feedback__form
+                    .feedback__label
+                        span <b>Оставьте свой телефон,</b><br>чтобы мы связались с вами
+
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row.form__row_error.form__row_mb10
+                            input(type="text" class="tel" required placeholder="+ 7 ( 000 ) 000-00-00")
+                        .form__row.form__row_text-sm
+                            input(type="text" placeholder="Какая операция вас интересует?")
+
+                        .form__row
+                            .button
+                                button.btn(type="submit") Свяжитесь со мной
+
+
+    // end feedback

@@ -1,0 +1,178 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin procedures
+    section#procedures.procedures.section
+        .container_center
+            .procedures__caption
+                h1.section__title.section__title_lg
+                    span <i>Косметология</i>
+                .procedures__desc
+                    span Предоставляем услуги эстетической, аппаратной, инъекционной<br> косметологии, контурной пластики и нитевого лифтинга
+            .procedures__list.counter-wrap
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/сosmetology_1.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Аппаратная косметология
+                        ul.list
+                            li
+                                a(href="#") SMAS-Лифтинг
+                            li
+                                a(href="#") RF-Лифтинг
+                //- end .procedures__item
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/сosmetology_2.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Контурная пластика
+                        ul.list
+                            li
+                                a(href="#") Контурная пластика зоны вокруг глаз, губ, подбородка, скул, шеи
+                //- end .procedures__item
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/сosmetology_3.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Эстетическая косметология
+                        ul.list
+
+                            li
+                                a(href="#") Мезотерапия
+                            li
+                                a(href="#") Плазмотерапия
+                            li
+                                a(href="#") Пилинги
+                            li
+                                a(href="#") Пилинги AESTHETICAL
+                            li
+                                a(href="#") Плацентарная терапия
+                            li
+                                a(href="#") Уходовые процедуры
+                            li
+                                a(href="#") Удаление новообразований
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/сosmetology_4.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Инъекционная косметология
+                        ul.list
+                            li
+                                a(href="#") Ботулинотерапия
+                            li
+                                a(href="#") Коллагеновая терапия
+                            li
+                                a(href="#") Липолитическая терапия
+                            li
+                                a(href="#") Гипергидроз
+                            li
+                                a(href="#") Биоревитализация
+                            li
+                                a(href="#") Безоперационная ринопластика
+                //- end .procedures__item
+
+                //- start .procedures__item
+                .procedures__item.counter-item
+                    .procedures__bg.bg(style="background-image: url('../../img/сosmetology_5.jpg')")
+                        .procedures__number
+                            i / 
+                            span.counter-el
+                    .procedures__content
+                        .procedures__title
+                            span Нитевой лифтинг
+                        ul.list
+                            li
+                                a(href="#") Нитевой лигатурный лифтинг нитями Aptos
+                            li
+                                a(href="#") Тредлифтинг мезонитями
+
+                //- end .procedures__item
+
+
+    // end procedures
+
+    // begin feedback
+    section#feedback.feedback.section
+        .container_center
+            .feedback__wrap.bg
+                .feedback__content
+                    h2.section__title
+                        span <i>Не знаете, какую</i><br> процедуру выбрать?
+                    .feedback__text.mobile
+                        span Теперь можно подарить своим близким молодость и красоту: на ваш выбор красивые подарочные сертификаты в медицинский центр «КофеМед» на любую сумму 
+                    .feedback__action
+                        .feedback__icon.circle(data-aos="fade-right" data-aos-delay="400")
+                            i.icon_phone
+                        .feedback__text
+                            span Звоните +7 (8352) 28-51-19, <a href="https://wa.me/+78352285119" target="_blank">пишите в WhatsApp или</a><br> оставьте ваш номер. Мы перезвоним вам<br> в ближайшее время, чтобы ответить на ваши вопросы
+                .feedback__form
+                    .feedback__label
+                        span <b>Оставьте свой телефон,</b><br> чтобы мы связались с вами
+
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row.form__row_error
+                            input(type="text" class="tel" required placeholder="+ 7 ( 000 ) 000-00-00")
+
+                        .form__row
+                            .button
+                                button.btn(type="submit") Свяжитесь со мной
+
+
+    // end feedback
+
+
+    // begin rehab
+    section#rehab.rehab.section
+        .container_center
+            h2.section__title
+                span <i>Реабилитация после пластических</i><br>операций и косметологических процедур
+            .rehab__desk
+                span Помогаем максимально ускорить процесс восстановления лица ﻿и тела
+            .rehab__content
+
+                //- start .procedures__item
+                .procedures__item
+                    .procedures__bg.bg(style="background-image: url('../../img/rehab.jpg')")
+                    .procedures__content
+                        .procedures__title
+                            span Реабилитация
+                        ul.list
+                            li
+                                a(href="#") LPG-массаж
+                            li
+                                a(href="#") Микротоковая терапия
+                            li
+                                a(href="#") Прессотерапия
+                            li
+                                a(href="#") Светотерапия
+                    //- end .procedures__item
+
+    // end rehab

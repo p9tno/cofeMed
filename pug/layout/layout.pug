@@ -1,6 +1,8 @@
 block variable
     -var path = '';
     -var page = true;
+    -var headerOpasity = '';
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -15,6 +17,7 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path +"css/fancybox.min.css")
 
         link(rel="stylesheet", type="text/css", href=path +"css/style.css")
+
     body
 
         //- begin preloader
@@ -38,6 +41,10 @@ html(lang="en")
             main.main_content
                 block content
 
+                if !page
+                    include benefits.pug
+                    include bottom.pug
+
 
             //- begin toTop
             //- .toTop
@@ -47,8 +54,10 @@ html(lang="en")
             //- end toTop
 
 
+
             include footer.pug
             include modal.pug
+
 
 
             script(src=path +"js/jquery.js")

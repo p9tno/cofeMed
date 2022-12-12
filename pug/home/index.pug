@@ -5,19 +5,19 @@ block variable
 
 block content
     // begin firstscreen
-    section#firstscreen.firstscreen.section
+    section#firstscreen.firstscreen.section.section_bg
         .firstscreen__bg.bg(style="background-image: url('../../img/firstscreen_bg.png')")
             .container_center
                 h1.section__title.section__title_lg.desktop
                     span <i>Комплексный подход к сохранению </i><br> вашей красоты и молодости
                 .firstscreen__desc.desktop
-                    span Команда «КофеМед» поможет вам предупредить появление возрастных<br> изменений и исправить их, а также сохранить красоту на многие годы
+                    span Команда «КофеМед» поможет вам предупредить появление возрастных<br>изменений и исправить их, а также сохранить красоту на многие годы
 
                 //- content mobile
                 h1.section__title.section__title_lg.mobile
                     span <i>Комплексный<br> подход к сохранению </i><br>вашей красоты<br> и молодости
                 .firstscreen__desc.mobile
-                    span Команда «КофеМед» поможет вам<br> предупредить появление возрастных<br>  изменений и исправить их, а также<br> сохранить красоту на многие годы
+                    span Команда «КофеМед» поможет вам<br> предупредить появление возрастных<br> изменений и исправить их, а также<br> сохранить красоту на многие годы
 
                 .firstscreen__img.img.mobile
                     img(src="../../img/firstscreen_img.png")
@@ -52,7 +52,7 @@ block content
                     .section__star.star(data-aos="flip-left")
                         i.icon_star
                     h2.section__title
-                        span <i>Самые выгодные</i><br> предложения сентября
+                        span <i>Самые выгодные</i><br>предложения сентября
 
                 .deals__arrows.custom_arrows.desktop
                     i.icon_arrow_left
@@ -98,10 +98,10 @@ block content
                 .giftCertificates__action
                     .giftCertificates__icon.circle
                         i.icon_phone
-                    span.desktop Чтобы узнать подробности, звоните +7 (8352) 28-51-19,<br><a href="#"> пишите нам в WhatsApp</a> или <a href="#">закажите обратный звонок</a>
+                    span.desktop Чтобы узнать подробности, звоните +7 (8352) 28-51-19,<br><a href="#">пишите нам в WhatsApp</a> или <a href="#">закажите обратный звонок</a>
 
                     //- content mobile
-                    span.mobile Чтобы узнать подробности, звоните<br> +7 (8352) 28-51-19,<a href="#"> пишите нам в WhatsApp</a><br> или <a href="#">закажите обратный звонок</a>
+                    span.mobile Чтобы узнать подробности, звоните<br> +7 (8352) 28-51-19,<a href="#">пишите нам в WhatsApp</a><br> или <a href="#">закажите обратный звонок</a>
                     //- end content mobile
 
                 .giftCertificates__btn
@@ -155,7 +155,7 @@ block content
                                 .cooperate__title
                                     span Мы сотрудничаем с лабораторией «Инвитро»
                                 .cooperate__text
-                                    span Пациенты, сдающие комплекс анализов для пластической<br> операции у нашего хирурга, получают ﻿скидку 10%
+                                    span Пациенты, сдающие комплекс анализов для пластической<br>операции у нашего хирурга, получают скидку 10%
 
                 .services__bg.bg.mobile(style="background-image: url('../../img/services_m_4.jpg')")
                     .services__wrap
@@ -168,72 +168,8 @@ block content
                     .cooperate__title
                         span Мы сотрудничаем с лабораторией «Инвитро»
                     .cooperate__text
-                        span Пациенты, сдающие комплекс анализов для пластической  операции у нашего хирурга, получают ﻿скидку 10%
+                        span Пациенты, сдающие комплекс анализов для пластической операции у нашего хирурга, получают скидку 10%
 
 
 
     // end services
-
-    // begin benefits
-    section#benefits.benefits.section
-        .crumbs.crumbs_col.mobile
-            span.crumb
-            span.crumb
-            span.crumb
-        .elipse.desktop
-        .container_center
-            h2.section__title
-                span <i>«КофеМед» — это не просто центр красоты,</i> а экспертная клиника эстетической
-                span медицины и врачебной косметологии
-            .benefits__grid.counter-wrap
-                each item in [ { bg: '1', title: 'Профессиональная команда', text: 'В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием' }, { bg: '2', title: 'Ответственность и безопасность', text: 'Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур' }, { bg: '3', title: 'Современное оборудование<br> и лучшие препараты', text: 'Например, один из 4-х официально зарегистрированных в РФ<br> аппаратов для SMAS-лифтинга Liftera находится именно у нас' }, ]
-                    .benefits__item.counter-item
-                        .benefits__bg.bg(style="background-image: url('../../img/benefits_"+item.bg+".jpg')")
-                            .benefits__number
-                                i / 
-                                span.counter-el
-                        .benefits__content
-                            .benefits__title
-                                span!=item.title
-                            .benefits__text
-                                span!=item.text
-
-    // end benefits
-
-    // begin bottom
-    section#bottom.bottom.section
-        .container_center.container_center_xl
-            .bottom__bg.bg
-                .container_center
-                    .bottom__content
-                        h2.section__title
-                            span <i>Будем рады видеть вас</i><br> в числе наших клиентов
-                        .bottom__video
-                            .play.youtubeModal-js#rsDoGqnPE4c
-                                .play__content
-                                    .play__icon
-                                        i.icon_play
-                                    .play__label
-                                        span видео <br> о клинике
-
-                            .pulse
-                                span
-                                span
-                                span.desktop
-                        .bottom__info
-                            .bottom__item
-                                .bottom__icon.circle(data-aos="fade-right" data-aos-delay="400")
-                                    i.icon_phone
-                                .bottom__text
-                                    b Телефон: <a href="tel:8 (8352) 28-51-19">8 (8352) 28-51-19</a>
-                                    span с 9:00 до 20:00 (ежедневно)
-
-                            .bottom__item
-                                .bottom__icon.circle(data-aos="fade-right" data-aos-delay="600")
-                                    i.icon_location
-                                .bottom__text
-                                    b Адрес:
-                                    span Чувашская Республика, г. Чебоксары,<br> ул. Гражданская, дом 5, помещение 14
-
-
-    // end bottom

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="preloader__wrap" id="preloader">
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="wrapper" id="wrapper">
-      <header class="header">
+      <header class="header header_opacity">
         <div class="header__top">
           <div class="container_center">
             <div class="header__content">
@@ -65,43 +65,91 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin testingNaw-->
-        <section class="testingNaw section" id="testingNaw" style="padding-top:15em;">
-          <div class="container_center">
-            <h2 class="section__title"><span>НАВИГАЦИЯ</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="home">Главная</a></li>
-              <li><a href="сosmetology">Косметология(услуги)</a></li>
-              <li><a href="servicepage">Страница услуги</a></li>
-              <li><a href="plastic">Пластическая хирургия(услуги)</a></li>
-            </ul>
-          </div>
-        </section>
-        <!-- begin testButton-->
-        <section class="testButton section" id="testButton">
-          <div class="container_center">
-            <h2 class="section__title"> <span>Кнопки</span></h2><br/>
-            <div class="testButton__content"><a class="btn" href="#">купить сертификат</a><br/><br/>
-              <div class="link_arrow"><a href="#">купить сертификат</a></div>
+        <!-- begin head-->
+        <section class="head section" id="head">
+          <div class="head__top bg" style="background-image: url('../../img/servicepage_bg_1.jpg')">
+            <div class="container_center">
+              <div class="head__wrap">
+                <div class="head__coption">
+                  <h1 class="head__title"><span>SMAS-лифтинг Liftera</span></h1>
+                  <div class="head__desc"><span>Подтяжка лица и шеи, которая происходит за счет сжигания лишних жировых клеток и стимуляции выработки нового коллагена</span></div>
+                </div>
+                <div class="head__button"><a href="#">записаться на прием</a></div>
+              </div>
             </div>
           </div>
         </section>
-        <!-- begin tetsNodal-->
-        <section class="tetsNodal section" id="tetsNodal">
+        <!-- end head-->
+        <!-- begin benefits-->
+        <section class="benefits section" id="benefits">
+          <div class="crumbs crumbs_col mobile"><span class="crumb"></span><span class="crumb"></span><span class="crumb"></span></div>
+          <div class="elipse desktop"></div>
           <div class="container_center">
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <div class="tetsNodal__content" style="font-size:1.25em;"><a class="btn show_js" href="#returncall">заказать звонок</a><br/><br/><br/><a class="btn youtubeModal-js" id="rsDoGqnPE4c" href="#modalVideo">ролик</a></div>
+            <h2 class="section__title"><span><i>«КофеМед» — это не просто центр красоты,</i> а экспертная клиника эстетической</span><span>медицины и врачебной косметологии</span></h2>
+            <div class="benefits__grid counter-wrap">
+              <div class="benefits__item counter-item">
+                <div class="benefits__bg bg" style="background-image: url('../../img/benefits_1.jpg')">
+                  <div class="benefits__number"><i>/ </i><span class="counter-el"></span></div>
+                </div>
+                <div class="benefits__content">
+                  <div class="benefits__title"><span>Профессиональная команда</span></div>
+                  <div class="benefits__text"><span>В нашем штате только специалисты с высшим и среднеспециальным медицинским образованием</span></div>
+                </div>
+              </div>
+              <div class="benefits__item counter-item">
+                <div class="benefits__bg bg" style="background-image: url('../../img/benefits_2.jpg')">
+                  <div class="benefits__number"><i>/ </i><span class="counter-el"></span></div>
+                </div>
+                <div class="benefits__content">
+                  <div class="benefits__title"><span>Ответственность и безопасность</span></div>
+                  <div class="benefits__text"><span>Работаем полностью легально по гос.лицензии. На 100% обеспечиваем нормы асептики и антисептики при проведении всех процедур</span></div>
+                </div>
+              </div>
+              <div class="benefits__item counter-item">
+                <div class="benefits__bg bg" style="background-image: url('../../img/benefits_3.jpg')">
+                  <div class="benefits__number"><i>/ </i><span class="counter-el"></span></div>
+                </div>
+                <div class="benefits__content">
+                  <div class="benefits__title"><span>Современное оборудование<br> и лучшие препараты</span></div>
+                  <div class="benefits__text"><span>Например, один из 4-х официально зарегистрированных в РФ<br> аппаратов для SMAS-лифтинга Liftera находится именно у нас</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end tetsNodal-->
-        <!-- begin first-->
-        <section class="first section" id="first">
-          <div class="container_center">
-            <h2 class="section__title">first section title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!-- end benefits-->
+        <!-- begin bottom-->
+        <section class="bottom section" id="bottom">
+          <div class="container_center container_center_xl">
+            <div class="bottom__bg bg">
+              <div class="container_center">
+                <div class="bottom__content">
+                  <h2 class="section__title"><span><i>Будем рады видеть вас</i><br> в числе наших клиентов</span></h2>
+                  <div class="bottom__video">
+                    <div class="play youtubeModal-js" id="rsDoGqnPE4c">
+                      <div class="play__content">
+                        <div class="play__icon"><i class="icon_play"></i></div>
+                        <div class="play__label"><span>видео <br> о клинике</span></div>
+                      </div>
+                    </div>
+                    <div class="pulse"><span></span><span></span><span class="desktop"></span></div>
+                  </div>
+                  <div class="bottom__info">
+                    <div class="bottom__item">
+                      <div class="bottom__icon circle" data-aos="fade-right" data-aos-delay="400"><i class="icon_phone"></i></div>
+                      <div class="bottom__text"><b>Телефон: <a href="tel:8 (8352) 28-51-19">8 (8352) 28-51-19</a></b><span>с 9:00 до 20:00 (ежедневно)</span></div>
+                    </div>
+                    <div class="bottom__item">
+                      <div class="bottom__icon circle" data-aos="fade-right" data-aos-delay="600"><i class="icon_location"></i></div>
+                      <div class="bottom__text"><b>Адрес:</b><span>Чувашская Республика, г. Чебоксары,<br> ул. Гражданская, дом 5, помещение 14</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end first-->
+        <!-- end bottom-->
       </main>
       <footer class="footer">
         <div class="container_center">
@@ -179,15 +227,15 @@
         </div>
       </div>
       <!-- End modal returncall-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/form.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

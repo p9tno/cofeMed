@@ -2,7 +2,11 @@
 
 .btn {
 	display: inline-block;
-	padding: 1.56em 3.75em;
+	padding: 1.56em 1em;
+	@media (min-width: 768px) {
+		padding: 1.56em 3.75em;
+
+	}
 
 	border: none;
 	outline: none;
