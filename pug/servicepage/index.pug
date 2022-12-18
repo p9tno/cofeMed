@@ -72,3 +72,250 @@ block content
 
 
     // end head
+
+    // begin indications
+    section#indications.indications.section
+        .indications__bg
+
+            .container_center
+                .indications__wrap
+                    .indications__caption
+                        .section__star.star(data-aos="flip-left")
+                            i.icon_star
+                        h2.section__title
+                            span <i>Показания </i><br> к процедуре
+                    .indications__content
+                        .swiper.indications-swiper-js
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .indications__list
+                                        each item in ['Носогубные складки', 'Дряблая кожа', 'Нависшие веки', 'Двойной подбородок',]
+                                            .indications__item
+                                                span=item
+                                .swiper-slide
+                                    .indications__list
+                                        each item in [ 'Опущение уголков губ', 'Глубокие мимические морщины', 'Нечеткий овал лица', 'Брыли']
+                                            .indications__item
+                                                span=item
+
+                            .swiper-scrollbar.mobile
+
+
+    // end indications
+
+    // begin look
+    section#look.look.section
+        .elipse
+        .container_center.container_center_lg
+            .look__wrap
+                .look__content
+                    h2.section__title
+                        span <i>Посмотрите,<br> как проходит</i><br>данная процедура <br>в клинике «КофеМед»
+                    .look__desc
+                        span В видео врач-косметолог рассказывает<br> о процедуре и отвечает на частые вопросы клиентов
+
+                .look__video
+                    .look__play.bg.youtubeModal-js#rsDoGqnPE4c(style="background-image: url('../../img/look_1.png')")
+                    .look__label.mobile
+                        span Посмотреть видео
+
+    // end look
+
+    // begin beforeAfter
+    section#beforeAfter.beforeAfter.section
+        .container_center
+            h2.section__title
+                span <i>Результаты наших клиентов</i> <br>от SMAS лифтинга Liftera
+            .beforeAfter__content
+
+                .swiper.beforeAfter-swiper-js
+                    .swiper-wrapper
+                        each item in ['', '', '']
+
+                            .swiper-slide
+                                .beforeAfter__item
+                                    .beforeAfter__before
+                                        .beforeAfter__img
+                                            a(href="../../img/img_1.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/img_1.jpg" loading="lazy" alt="img")
+                                            .beforeAfter__label
+                                                span до
+
+                                    .beforeAfter__after
+                                        .beforeAfter__img.beforeAfter__img_border
+                                            a(href="../../img/img_2.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/img_2.jpg" loading="lazy" alt="img")
+                                            .beforeAfter__label
+                                                span после
+                    .swiper-scrollbar
+
+            .beforeAfter__instruction
+                .swiper__label
+                    .swiper__icon
+                        i.icon_hand
+                    span Листайте влево/вправо
+
+
+    // end beforeAfter
+
+    // begin equipment
+    section#equipment.equipment.section
+        .container_center
+            .equipment__bg.bg
+                .equipment__content
+                    .equipment__crumbs.desktop
+                        .crumbs.crumbs_col
+                            span.crumb
+                            span.crumb
+                            span.crumb
+                            span.crumb
+
+                    h2.section__title
+                        span <i>Оборудование</i>
+                    .equipment__info
+                        span Мы используем Liftera A от компании Asterasys (Ю. Корея) — аппарат нового поколения, в котором помимо линейной манипулы, есть анатомическая манипула Pen Type.
+                    .equipment__after
+                        .crumbs.desktop
+                            span.crumb
+                            span.crumb
+                            span.crumb
+                        span Благодаря ей можно работать по ходу лицевых мышц и линиям натяжения кожи, что увеличивает безопасность, эффективность лифтинга и снижает его болезненность.
+
+                .equipment__img.bg.mobile(style="background-image: url('../../img/device_m.png')")
+                .equipment__img.bg.desktop(style="background-image: url('../../img/device.png')")
+
+
+    // end equipment
+
+    // begin cost
+    section#cost.cost.section
+        .container_center
+            .cost__caption
+                .cost__icon
+                    .cost__img
+                        img(src="../../img/ruble.svg", alt="ruble")
+
+                h2.section__title
+                    span <i>Виды и стоимость</i> процедуры
+
+            .cost__list
+                each item in [ {title: 'Средняя + нижняя треть лица со средним объемом <br>мягких тканей (усталый тип) (от 400 линий)', price: '24 000 ₽' }, {title: 'Средняя + нижняя треть лица с тонкой кожей, недостаточным <br> объемом мягких тканей, мелкоморщинистый тип (до 300 линий)', price: '24 000 ₽' }, {title: 'Средняя + нижняя треть лица крупного лица с выраженным<br> деформационным типом старения, значительным объемом <br>мягких тканей (до 500 - 600 линий)', price: '30 000-36 000 ₽' }, {title: 'Средняя треть лица (область SOOF, до 400 линий)', price: '24 000 ₽' }, {title: 'Средняя + нижняя треть лица крупного лица с выраженным<br> деформационным типом старения, значительным объемом <br>мягких тканей (до 500 - 600 линий)', price: '30 000-36 000 ₽' }, {title: 'Средняя треть лица (область SOOF, до 400 линий)', price: '24 000 ₽' } ]
+                    .cost__item
+                        .cost__title
+                            span!=item.title
+                        .cost__price
+                            span!=item.price
+
+            .cost__more.link_arrow
+                a.show_more_js(href="#" data-load="Загрузкка" data-more="Смотреть еще") смотреть весь прайс-лист
+
+            .cost__info
+                span *Указанная на данной странице информация не является публичной офертой. Итоговая <br>стоимость услуг рассчитывается для каждого пациента на индивидуальной консультации.
+
+
+    // end cost
+
+    // begin signup
+    section#signup.signup.section
+        .container_center
+            .signup__inner
+
+                h2.section__title
+                    span.desktop <i>Записаться</i>на SMAS-лифтинг Liftera
+                    span.mobile <i>Записаться</i><br> на SMAS-лифтинг Liftera
+                .signup__wrap
+                    .signup__slider
+                        .swiper.signup-swiper-js
+                            .swiper-wrapper
+                                each item in [1, 2,]
+
+                                    .swiper-slide
+                                        .signup__item
+                                            .signup__bg.bg(style="background-image: url('../../img/img_"+item+".jpg')")
+                                            .signup__content
+                                                .signup__star
+                                                    .star.star_light(data-aos="flip-left")
+                                                        i.icon_star
+                                                .signup__name
+                                                    span Кузнецова Ирина<br> Валерьевна
+                                                .signup__info
+                                                    span Врач-косметолог
+
+                            .swiper-scrollbar
+
+                //- .signup__instruction
+                //-     .swiper__label
+                //-         .swiper__icon
+                //-             i.icon_hand
+                //-         span Листайте влево/вправо
+                .signup__button
+                    a.btn(href="#") Записаться на прием
+
+    // end signup
+
+    // begin signup
+    section#signup.signup.section
+        .container_center
+            .signup__inner
+                h2.section__title.section__title_signup
+                    span.desktop <i>Записаться на бесплатную</i><br>консультацию пластического хирурга
+                    span.mobile <i>Записаться на бесплатную</i><br><i class="icon_arrow_long_sm"></i>консультацию<br> пластического хирурга
+
+                .signup__wrap
+                    .signup__item.signup__item_single
+                        .signup__bg.bg(style="background-image: url('../../img/img_3.jpg')")
+                        .signup__content
+                            .signup__star
+                                .star.star_light(data-aos="flip-left")
+                                    i.icon_star
+                            .signup__name
+                                span Яхонтов Андрей<br> Владимирович
+                            .signup__info
+                                span Пластический хирург
+
+
+
+                .signup__button
+                    a.btn(href="#") Записаться на прием
+
+    // end signup
+
+    // begin signup
+    section#signup.signup.section
+        .container_center
+            .signup__inner
+                h2.section__title
+                    span.desktop <i>Записаться</i>на SMAS-лифтинг Liftera
+                    span.mobile <i>Записаться</i><br> на SMAS-лифтинг Liftera
+
+                .signup__wrap
+                    .signup__slider
+                        .swiper.signup-swiper-js
+                            .swiper-wrapper
+                                each item in [1, 2, 1, 2]
+
+                                    .swiper-slide
+                                        .signup__item
+                                            .signup__bg.bg(style="background-image: url('../../img/img_"+item+".jpg')")
+                                            .signup__content
+                                                .signup__star
+                                                    .star.star_light(data-aos="flip-left")
+                                                        i.icon_star
+                                                .signup__name
+                                                    span Кузнецова Ирина<br> Валерьевна
+                                                .signup__info
+                                                    span Врач-косметолог
+
+                            .swiper-scrollbar
+
+                .signup__instruction.desktop
+                    .swiper__label
+                        .swiper__icon
+                            i.icon_hand
+                        span Листайте влево/вправо
+                .signup__button
+                    a.btn(href="#") Записаться на прием
+
+
+
+    // end signup

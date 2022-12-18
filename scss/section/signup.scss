@@ -1,0 +1,196 @@
+.signup {
+    .section__title {
+        text-align: center;
+        margin-bottom: 1.875em;
+        @media (min-width: 768px) {
+            margin-bottom: 4.375em;
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: 1.6875em;
+            }
+        }
+
+        .icon_arrow_long_sm {
+            display: inline-block;
+            font-style: normal;
+            color: $color_primary;
+            font-size: 0.43em;
+            transform: translateY(-0.25em);
+            margin-right: 3em;
+
+        }
+
+        &_signup {
+            @media (max-width: 767px) {
+                text-align: left;
+
+                span {
+                    font-size: 1.4375em;
+                }
+            }
+        }
+
+    }
+
+    .container_center {
+        @media (min-width: 768px) {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -4em;
+                left: 0;
+                width: 100%;
+                height: 35.375em;
+                background-color: #FBFBFB;
+                border-radius: 0.625em;
+            }
+
+        }
+    }
+
+    &__inner {
+        @media (min-width: 768px) {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__wrap {
+        margin: 0 -0.625em;
+        @media (min-width: 768px) {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    &__slider {
+        @media (min-width: 768px) {
+            width: 55.5em;
+            margin: 0 -4em;
+
+        }
+
+        .swiper {
+            padding: 0 2em 2.875em;
+            @media (min-width: 768px) {
+                padding: 0 4em 2em;
+            }
+
+        }
+    }
+
+    &__item {
+        @media (min-width: 768px) {
+            width: 22.5em;
+        }
+
+        &_single {
+            @media (max-width: 767px) {
+                width: 17.625em;
+                margin: 0 auto;
+
+            }
+        }
+    }
+
+    &__bg {
+        padding-bottom: 14.625em;
+        @media (max-width: 767px) {
+            background-position: top;
+        }
+        @media (min-width: 768px) {
+            padding-bottom: 25.75em;
+
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        background-color: $color_white;
+        text-align: center;
+        box-shadow: (0px 2px 8px rgba(0, 0, 0, 0.06));
+        padding: 2em 1.25em 1.25em;
+        @media (min-width: 768px) {
+            padding: 2.875em 3.5em;
+        }
+    }
+
+    &__name {
+        line-height: 1.4;
+        margin-bottom: 0.375em;
+        @media (min-width: 768px) {
+            margin-bottom: 0.625em;
+
+        }
+
+        span {
+            font-family: $second_font_family;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.0625em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+            }
+        }
+    }
+
+    &__star {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -1.6875em;
+        @media (min-width: 768px) {
+            top: -2.1875em;
+
+        }
+
+    }
+
+    &__info {
+        line-height: 1.5;
+
+        span {
+            color: #979797;
+            font-weight: 500;
+            font-size: 0.8125em;
+
+            @media (min-width: 768px) {
+                font-size: 1.375em;
+
+            }
+        }
+    }
+
+    &__instruction {
+        margin-top: 2em;
+        text-align: center;
+
+        .swiper__label {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 2.5em;
+        @media (min-width: 768px) {
+            margin-top: 3.75em;
+
+        }
+
+        .btn {
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+    }
+
+}

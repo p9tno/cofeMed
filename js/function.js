@@ -253,6 +253,45 @@ $(document).ready(function() {
     });
 
 
+    function showMore(classItem, btn) {
+        let start = 4;
+        let show = 4;
+
+        let item = $(''+ classItem +'');
+        let count = item.length;
+
+        item.addClass('d-none');
+
+        $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+        $('' + classItem + ':nth-child('+start+')').addClass('bd_none');
+
+        $(btn).click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+
+            let load = $(this).data('load');
+            let more = $(this).data('more');
+
+            start = (start + show <= count) ? start + show : count;
+
+            $(this).text(load);
+
+            setTimeout(() => {
+                $(''+ classItem +':lt(' + start + ')').removeClass('d-none bd_none');
+
+
+                if ($(''+ classItem +':not(.d-none)').length == count) {
+                    $(this).parent().remove();
+                }
+
+                $(this).removeClass('loading');
+                $(this).text(more);
+            }, 500);
+        });
+    }
+    showMore('.cost__item', '.show_more_js');
+
+
 
 
 
