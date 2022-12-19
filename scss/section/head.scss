@@ -411,3 +411,45 @@
     }
 
 }
+
+.head_sm {
+    overflow: hidden;
+
+    .head__top {
+        padding-top: 6.25em;
+        padding-bottom: 3.75em;
+        @media (min-width: 768px) {
+            padding-top: 17.125em;
+            padding-bottom: 5em;
+        }
+    }
+
+    .head__caption {
+        @media (max-width: 767px) {
+            text-align: left;
+            padding: 0 1.25em;
+        }
+    }
+
+    .head__desc {
+        br {
+            display: inline;
+        }
+    }
+
+    .head__button {
+        @media (max-width: 767px) {
+            margin-top: 0;
+        }
+
+        .pulse {
+            transform: none;
+            top: 28em;
+            left: 18em;
+            @media (min-width: 768px) {
+                top: 23em;
+                left: -14em;
+            }
+        }
+    }
+}

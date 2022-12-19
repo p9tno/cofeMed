@@ -152,8 +152,9 @@ block content
             .beforeAfter__instruction
                 .swiper__label
                     .swiper__icon
-                        i.icon_hand
-                    span Листайте влево/вправо
+                        i.icon_pointer
+                    span <b>Листайте влево,</b> чтобы <br>увидеть все результаты
+
 
 
     // end beforeAfter
@@ -212,6 +213,42 @@ block content
             .cost__info
                 span *Указанная на данной странице информация не является публичной офертой. Итоговая <br>стоимость услуг рассчитывается для каждого пациента на индивидуальной консультации.
 
+            .cost__content
+                .cost__part
+                    .cost__bg.bg(style="background-image: url('../../img/cost_1.jpg')")
+                    .cost__wrap
+                        .cost__star
+                            .star.star_light(data-aos="flip-left")
+                                i.icon_star
+                        .cost__subtitle
+                            span Где проводятся<br> приемы и операции?
+                        .cost__text
+                            p Консультации проходят в Центре врачебной<br> косметологии и пластической хирургии «КофеМед» 
+                            p Операции проходят в отделении пластической<br> хирургии ГКБ №1 г. Чебоксары
+
+                .cost__part
+                    .cost__bg.bg(style="background-image: url('../../img/cost_2.jpg')")
+                    .cost__wrap
+                        .cost__star
+                            .star.star_light(data-aos="flip-left")
+                                i.icon_star
+                        .cost__subtitle
+                            span Что входит в стоимость операции?
+                        .cost__text
+                            ul        
+                                li Консультация хирурга и анестезиолога
+                                li Компьютерное моделирование
+                                li Наркоз
+                                li Нахождение в стационаре
+                                li Обязательные перевязки
+                                li Компрессионное белье
+                                li Стартовая программа реабилитации
+                                li (3 процедуры в клинике «КофеМед»)
+                                li Наблюдение в течение года
+
+
+
+
 
     // end cost
 
@@ -246,8 +283,9 @@ block content
                 //- .signup__instruction
                 //-     .swiper__label
                 //-         .swiper__icon
-                //-             i.icon_hand
-                //-         span Листайте влево/вправо
+                //-             i.icon_pointer
+                //-         span <b>Листайте влево,</b> чтобы <br>увидеть всеx врачей
+
                 .signup__button
                     a.btn(href="#") Записаться на прием
 
@@ -311,11 +349,171 @@ block content
                 .signup__instruction.desktop
                     .swiper__label
                         .swiper__icon
-                            i.icon_hand
-                        span Листайте влево/вправо
+                            i.icon_pointer
+                        span <b>Листайте влево,</b> чтобы <br>увидеть всеx врачей
                 .signup__button
                     a.btn(href="#") Записаться на прием
 
 
 
     // end signup
+
+    // begin feedback
+    section#feedback.feedback.feedback_service.section
+        .container_center
+            .feedback__wrap.bg
+                .feedback__content
+                    h2.section__title
+                        span <i>Есть вопросы?</i>
+                    .feedback__action
+                        .feedback__icon.circle(data-aos="fade-right" data-aos-delay="400")
+                            i.icon_phone
+                        .feedback__text
+                            span Звоните +7 (8352) 28-51-19, <a href="https://wa.me/+78352285119" target="_blank">пишите в WhatsApp</a><br> или оставьте ваш номер,чтобы мы вам<br> перезвонили в ближайшее время
+                .feedback__form
+
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row.form__row_error.form__row_mb10
+                            input(type="text" class="tel" required placeholder="+ 7 ( 000 ) 000-00-00")
+
+                        .form__row
+                            .button
+                                button.btn(type="submit") Свяжитесь со мной
+
+
+    // end feedback
+
+    // begin stage
+    section#stage.stage.section
+        .container_center
+            h2.section__title
+                span <i>Безопасность здоровья пациентов</i><br> обеспечивается на каждом этапе работы
+            .stage__instruction.mobile
+                .swiper__label
+                    .swiper__icon
+                        i.icon_pointer
+                    span <b>Листайте влево,</b> чтобы <br>увидеть все категории
+            .stage__slider
+                .swiper.stage-swiper-js
+                    .swiper-wrapper
+
+                        .swiper-slide
+                            .stage__item
+                                .stage__bg.bg(style="background-image: url('../../img/stage_1.jpg')")
+                                .stage__content
+                                    .stage__star
+                                        .star.star_light(data-aos="flip-left")
+                                            i.icon_star
+                                    .stage__title
+                                        span Подготовка <br> к операции
+                                    ul.stage__list.list
+                                        li
+                                            span Сдача анализов
+                                        li
+                                            span Обязательное предопера- ционное обследование
+                                        li
+                                            span Сбор анамнеза
+                                        li
+                                            span Консультация анестезиолога
+
+                        .swiper-slide
+                            .stage__item
+                                .stage__bg.bg(style="background-image: url('../../img/stage_2.jpg')")
+                                .stage__content
+                                    .stage__star
+                                        .star.star_light(data-aos="flip-left")
+                                            i.icon_star
+                                    .stage__title
+                                        span Во время<br> операции
+                                    ul.stage__list.list
+                                        li
+                                            span Хирург контролирует состояние пациента во время операции
+                                        li
+                                            span За дыханием, пульсом, кардиограммой и поступлением кислорода следит опытный анестезиолог
+                                        li
+                                            span Используется специальное мониторящее оборудование
+
+                        .swiper-slide
+                            .stage__item
+                                .stage__bg.bg(style="background-image: url('../../img/stage_3.jpg')")
+                                .stage__content
+                                    .stage__star
+                                        .star.star_light(data-aos="flip-left")
+                                            i.icon_star
+                                    .stage__title
+                                        span После<br> операции
+                                    ul.stage__list.list
+                                        li
+                                            span Непрерывный контроль в стационаре
+                                        li
+                                            span На случай ухудшения состояния в клинике есть отделение реанимации
+                                        li
+                                            span Ассистент хирурга выполняет регулярные перевязки
+                                        li
+                                            span Индивидуальные рекомендации по восстановлению
+
+
+
+                    .swiper-scrollbar
+
+
+
+
+
+    // end stage
+
+    // begin reviews
+    section#reviews.reviews.section
+        .container_center
+            h2.section__title
+                span <i>Отзывы и впечатления</i><br><i class="icon_arrow_long"></i> о нашем подходе к вашей красоте
+            .reviews__list
+                .reviews__col
+                    each item in ['Делала у вас операцию 5 лет назад. Как сейчас помню ощущения: ждала боль, но ее не было, ждала плохое состояние после наркоза — тоже не было. Это был всего страх и только! Было все хорошо и ничего нигде не болело. Спасибо Вам. Всегда и всем говорю: «У него золотые руки!».', 'Честно, раньше я редко задумывалась на такими простыми словами «Доброта спасет мир». Действительно, говоря о женском добре, оно может быть оценено только близкими людьми. А вот красота — ключ от многих дверей. Конечно, с возрастом теряются пропорции, искажается лицо, заплывают былые привлекательные формы тела. Наряду с этим всем уходит уверенность, появляются комплексы, порожденные эстетическими недостатками. Андрей Владимирович, вы для меня Творец: возвращаете те годы жизни, когда я думала, что все, что есть на свете, создано для меня. Благодарю.'  ]
+
+                        .reviews__item
+                            .reviews__icon
+                                i.icon_quotes
+                            .reviews__content
+                                span=item
+                .reviews__col
+                    each item in [ '5 дней после операции. Каждый раз проходя мимо зеркала я становлюсь значительно моложе. Смело могу сказать — 15 лет минус. И если действительно результат будет держаться 10 лет — это 25 лет молодости за незначительную сумму! ДА, это самое выгодное вложение для женщины. Ну что же, планы грандиозные, потому как качество жизни и уверенность в себе начинают зашкаливать.', 'В воскресенье будет две недели с момента операции. Я счастлива. Хочу выразить огромную благодарность всему персоналу клиники. Особенно мед. сестре Наталье. Она у вас крутая! Профессиональная и все делает очень аккуратно. И в целом все прошло на высшем уровне.'  ]
+
+                        .reviews__item
+                            .reviews__icon
+                                i.icon_quotes
+                            .reviews__content
+                                span=item
+
+            .reviews__action.link_arrow.mobile
+                a.show_reviews_js(href="#" data-load="Загрузкка" data-more="еще отзывы") еще отзывы
+
+
+    // end reviews
+
+    // begin diagnose
+    section#diagnose.diagnose.section
+        .container_center
+            h2.section__title
+                span <i>Какое оборудование</i> <br> мы используем для диагностики
+            .diagnose__grid.counter-wrap
+                each item in [ {bg: '1', text: '<b>MarkVu</b> — высокотехнологичный комплекс для сканирования кожи и анализа ее состояния: увлажненность, сосудистые сетки, пигментация, выделения подкожного сала и прочее.'}, {bg: '2', text: '<b>Aramo ASW</b> — диагностический аппарат, использующийся для исследования состояния кожи головы, волосяных фолликулов, самого волоса и оценки кожных новообразований (родинок, папиллом, бородавок).'} ]
+
+                    .diagnose__item.counter-item
+                        .diagnose__bg.bg.mobile(style="background-image: url('../../img/diagnose_m_"+item.bg+".jpg')")
+
+                        .diagnose__bg.bg.desktop(style="background-image: url('../../img/diagnose_"+item.bg+".jpg')")
+                            .diagnose__number
+                                i / 
+                                span.counter-el
+                        .diagnose__text
+                            span!=item.text
+
+
+
+    // end diagnose

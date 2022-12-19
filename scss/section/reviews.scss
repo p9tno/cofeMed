@@ -1,0 +1,120 @@
+.reviews {
+    .section__title {
+        margin-bottom: 2.5em;
+        padding-left: 1.5em;
+
+        .icon_arrow_long {
+            color: $color_primary;
+            font-style: normal;
+            font-size: 0.2em;
+            display: inline-block;
+            transform: translateY(-1em);
+            margin-right: 2em;
+            @media (min-width: 768px) {
+                font-size: 0.23em;
+            }
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: 1.5em;
+            }
+        }
+
+        br {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline;
+            }
+        }
+    }
+
+    &__list {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+    }
+
+    &__col {
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+    }
+
+    &__item {
+        column-fill: auto;
+
+        background: linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, #E8E8E8 100%);
+        border: 0.0625em solid #F3F3F3;
+
+        padding: 1.25em 1.5em 1.5em 3.125em;
+        @media (min-width: 768px) {
+            padding: 1.875em 2.5em 1.875em 1.5625em;
+            display: flex;
+
+        }
+    }
+
+    &__icon {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2.875em;
+        height: 2.875em;
+        border-radius: 50%;
+
+        border: 0.0625em solid $color_primary;
+        color: $color_primary;
+
+        font-size: 0.8264em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-right: 1.625em;
+
+        }
+
+        i {
+            font-size: 0.875em;
+        }
+    }
+
+    &__content {
+        margin-top: 0.75em;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            line-height: 1.7;
+
+        }
+
+        span {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+
+        }
+    }
+
+    &__action {
+        letter-spacing: 0.1em;
+        margin-top: 1.875em;
+        margin-left: 3.125em;
+
+        a {
+            color: $color_primary;
+            font-weight: 800;
+            font-size: 0.875em;
+
+            &:before {
+                background-color: $color_primary;
+
+            }
+        }
+    }
+
+}

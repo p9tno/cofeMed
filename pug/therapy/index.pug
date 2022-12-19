@@ -1,0 +1,169 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin head
+    section#head.head.head_sm
+        //- mobil content
+        .head__top.bg.mobile(style="background-image: url('../../img/therapy_bg_m.jpg')")
+            .container_center
+                .head__wrap
+                    .head__caption
+                        h1.head__title
+                            span Терапия
+                        .head__desc
+                            span Забор анализов<br> и лабораторные исследования
+                    .head__button
+                        .pulse
+                            span
+                            span
+                            span
+
+        //- mobil content
+
+        .head__top.bg.desktop(style="background-image: url('../../img/therapy_bg.jpg')")
+            .container_center
+                .head__wrap
+                    .head__caption
+                        h1.head__title
+                            span Терапия
+                        .head__desc
+                            span Забор анализов и лабораторные исследования
+                    .head__button
+
+                        .pulse
+                            span
+                            span
+                            span
+
+
+    // end head
+
+    // begin content
+    section#content.content.section
+        .container_center
+            .content__content
+                p <b>Назначение эффективного лечения требует точной диагностики,<br> а такая диагностика невозможна без лабораторных исследований.</b>
+                p Для удобства наших клиентов клиника «КофеМед» сотрудничает с лабораторией «Инвитро». У нас вы можете сдать весь спектр лабораторных исследований крови:
+                ul
+                    li Гематологических;
+                    li Биохимических;
+                    li Гормональных;
+                    li Аллергодиагностика (около 300 аллергенов и панелей);
+                    li Онкомаркеры;
+                    li Диагностика инфекционных заболеваний;
+                    li Цитологические исследования;
+                    li ПЦР-диагностика; ИППП;
+                    li Гепатит В, С (качественное и количественное определение и генотипирование).
+
+                p <b>Скачайте актуальный прайс в формате Excel-таблицы,<br> чтобы ознакомиться с полным перечнем анализов.</b>
+
+            .content__button
+                a.btn(href="../../img/pdf.pdf" target="_blank") Скачать прайс
+
+
+
+
+    // end content
+
+    // begin data
+    section#data.data.section
+        .container_center
+            .data__grid
+                .data__part
+                    .data__bg.bg(style="background-image: url('../../img/data_1.jpg')")
+                    .data__content
+                        .data__title
+                            span График приема
+                        .data__list
+                            .data__item
+                                .data__icon
+                                    i.icon_clock
+                                .data__text
+                                    span Забор крови проводится по понедельникам, средам, пятницам <b>с 08:00 до 13:00 часов.</b>
+                            .data__item
+                                .data__icon
+                                    i.icon_location
+                                .data__text
+                                    span <b>Адрес:</b> г. Чебоксары, ул. Гражданская, д. 5, пом. 14.
+
+                .data__part
+                    .data__bg.bg(style="background-image: url('../../img/data_2.jpg')")
+                    .data__content
+                        .data__title
+                            span Скидки
+                        .data__list
+                            .data__item
+                                .data__icon
+                                    i.icon_discont
+                                .data__text
+                                    span Пациенты, сдающие комплекс анализов для пластической операции у нашего хирурга, получают <b>﻿скидку 10%.</b>
+
+
+    // end data
+
+
+
+
+
+
+
+
+
+
+
+    // begin feedback
+    section#feedback.feedback.feedback_service.section
+        .container_center
+            .feedback__wrap.bg
+                .feedback__content
+                    h2.section__title
+                        span <i>Есть вопросы?</i>
+                    .feedback__action
+                        .feedback__icon.circle(data-aos="fade-right" data-aos-delay="400")
+                            i.icon_phone
+                        .feedback__text
+                            span Звоните +7 (8352) 28-51-19, <a href="https://wa.me/+78352285119" target="_blank">пишите в WhatsApp</a><br> или оставьте ваш номер,чтобы мы вам<br> перезвонили в ближайшее время
+                .feedback__form
+
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row.form__row_error.form__row_mb10
+                            input(type="text" class="tel" required placeholder="+ 7 ( 000 ) 000-00-00")
+
+                        .form__row
+                            .button
+                                button.btn(type="submit") Свяжитесь со мной
+
+
+    // end feedback
+
+    // begin diagnose
+    //- section#diagnose.diagnose.section
+    //-     .container_center
+    //-         h2.section__title
+    //-             span <i>Какое оборудование</i> <br> мы используем для диагностики
+    //-         .diagnose__grid.counter-wrap
+    //-             each item in [ {bg: '1', text: '<b>MarkVu</b> — высокотехнологичный комплекс для сканирования кожи и анализа ее состояния: увлажненность, сосудистые сетки, пигментация, выделения подкожного сала и прочее.'}, {bg: '2', text: '<b>Aramo ASW</b> — диагностический аппарат, использующийся для исследования состояния кожи головы, волосяных фолликулов, самого волоса и оценки кожных новообразований (родинок, папиллом, бородавок).'} ]
+    //- 
+    //-                 .diagnose__item.counter-item
+    //-                     .diagnose__bg.bg.mobile(style="background-image: url('../../img/diagnose_m_"+item.bg+".jpg')")
+    //- 
+    //-                     .diagnose__bg.bg.desktop(style="background-image: url('../../img/diagnose_"+item.bg+".jpg')")
+    //-                         .diagnose__number
+    //-                             i / 
+    //-                             span.counter-el
+    //-                     .diagnose__text
+    //-                         span!=item.text
+
+
+
+    // end diagnose

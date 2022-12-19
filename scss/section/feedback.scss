@@ -136,6 +136,7 @@
         input[type=text] {
             background-color: #F3F3F3;
         }
+
     }
 
     &__label {
@@ -182,5 +183,41 @@
 
     .feedback__form {
         height: 20.25em;
+    }
+}
+
+.feedback_service {
+    .feedback__wrap {
+        @media (min-width: 768px) {
+            padding-top: 3.75em;
+            padding-left: 11.375em;
+            padding-bottom: 5.25em;
+            padding-left: 6.875em;
+            background-image: url("../img/feedback_service_bg.jpg");
+        }
+
+    }
+
+    .section__title {
+        @media (min-width: 768px) {
+            margin-bottom: 2.25em;
+        }
+    }
+
+    .feedback__form {
+        height: auto;
+        background-color: inherit;
+        margin-top: 0;
+        padding-bottom: 0;
+        @media (min-width: 768px) {
+            padding: 0;
+            border-radius: 0;
+            margin-top: 1.25em;
+        }
+
+        input[type=text] {
+            background-color: $color_white;
+        }
+
     }
 }

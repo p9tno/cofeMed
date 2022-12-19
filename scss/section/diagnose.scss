@@ -1,0 +1,109 @@
+.diagnose {
+    .section__title {
+        text-align: center;
+        margin-bottom: 1.875em;
+        @media (min-width: 768px) {
+            text-align: left;
+            margin-bottom: 4.375em;
+
+        }
+    }
+
+    .container_center {
+        @media (max-width: 767px) {
+            padding: 0 1.5em;
+        }
+    }
+
+    &__grid {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2.5em;
+            grid-auto-rows: minmax(25.375em,auto);
+        }
+    }
+
+    &__item {
+        background-color: $color_white;
+        overflow: hidden;
+        border-radius: 2.5em 2.5em 0 0;
+        box-shadow: (0px 46px 180px rgba(0, 0, 0, 0.06));
+        margin-bottom: 1.25em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+
+            &:nth-child(1) {
+                border-radius: 2.5em 0 0 0;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0 2.5em 0 0;
+            }
+
+        }
+    }
+
+    &__bg {
+        height: 15.125em;
+        @media (min-width: 768px) {
+            padding: 1.25em 2.5em;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__number {
+        @media (min-width: 768px) {
+            span {
+                font-family: $second_font_family;
+                font-style: italic;
+                font-weight: 600;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+                font-size: 3em;
+
+            }
+
+            i {
+                font-family: $second_font_family;
+                font-style: italic;
+                font-weight: 100;
+                margin-right: 0.014em;
+                color: $color_primary;
+                text-shadow: 0 4px 79px rgba(0, 0, 0, 0.35);
+                font-size: 3em;
+
+            }
+
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        padding: 1.5em 1em;
+        @media (min-width: 768px) {
+            line-height: 1.7;
+            padding: 1.75em 2.75em;
+
+        }
+
+        span {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+
+        b {
+            font-weight: 800;
+        }
+    }
+
+}

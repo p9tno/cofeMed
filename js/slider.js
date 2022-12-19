@@ -86,4 +86,21 @@ $(document).ready(function() {
         }
     });
 
+    const stage = new Swiper('.stage-swiper-js', {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        scrollbar: {
+           el: ".swiper-scrollbar",
+           // hide: true,
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 40,
+                slidesPerView: 3,
+            },
+        }
+    });
+
 });

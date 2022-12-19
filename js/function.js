@@ -255,7 +255,7 @@ $(document).ready(function() {
 
     function showMore(classItem, btn) {
         let start = 4;
-        let show = 4;
+        let show = 2;
 
         let item = $(''+ classItem +'');
         let count = item.length;
@@ -290,6 +290,7 @@ $(document).ready(function() {
         });
     }
     showMore('.cost__item', '.show_more_js');
+    showMore('.reviews__item', '.show_reviews_js');
 
 
 
