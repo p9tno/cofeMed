@@ -1,0 +1,57 @@
+//- promotions
+//- (style="background-image: url('../../img/data_1.jpg')")
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+
+    // begin deals
+    section#deals.deals.section
+        .container_center
+            h1.section__title.section__title_lg
+                span <i>Акции в медицинском центре «КофеМед»</i>
+            .deals__part
+                .deals__subtitle
+                    span Самые выгодные предложения сентября
+                .deals__list
+                    each item in [1,2,3]
+                        .deals__item
+                            .deals__bg.bg(style="background-image: url('../../img/promotions_"+item+".jpg')")
+                            .deals__content
+                                .deals__star.star.star_sm.star_light(data-aos="flip-left")
+                                    i.icon_star
+                                .deals__title
+                                    span Здесь заголовок <br> в две строки
+                                .deals__text
+                                    span На комплекс аппаратных процедур SMAS-лифтинг Liftera + микроигольчатый RF-лифтинг Infini
+                                .deals__link.link_arrow
+                                    a(href="#") Подробнее
+                                .deals__button
+                                    a.btn(href="#") Записаться на прием
+
+            .deals__part
+                .elipse.desktop
+                .deals__subtitle
+                    span Постоянные акции в «КофеМед»
+                .deals__list
+                    each item in [4,5]
+                        .deals__item
+                            .deals__bg.bg(style="background-image: url('../../img/promotions_"+item+".jpg')")
+                            .deals__content
+                                .deals__star.star.star_sm.star_light(data-aos="flip-left")
+                                    i.icon_star
+                                .deals__title
+                                    span Здесь заголовок <br> в две строки
+                                .deals__text
+                                    span На комплекс аппаратных процедур SMAS-лифтинг Liftera + микроигольчатый RF-лифтинг Infini
+                                .deals__link.link_arrow
+                                    a(href="#") Подробнее
+                                .deals__button
+                                    a.btn(href="#") Записаться на прием
+
+
+    // end deals

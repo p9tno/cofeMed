@@ -1778,6 +1778,90 @@ body.bg_white {
     margin-top: 0;
   }
 }
+.deals .deals__part {
+  margin-top: 1.625em;
+  margin-bottom: 3.125em;
+}
+.deals .deals__part:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .deals .deals__part {
+    position: relative;
+    margin-top: 1.875em;
+    margin-bottom: 6.25em;
+  }
+}
+@media (min-width: 768px) {
+  .deals .deals__part .elipse {
+    top: -12em;
+    left: 25em;
+  }
+}
+.deals .deals__subtitle {
+  margin-bottom: 1.875em;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .deals .deals__subtitle {
+    margin-bottom: 4.375em;
+    display: block;
+  }
+}
+.deals .deals__subtitle:before {
+  content: "";
+  font-family: "icomoon";
+  color: #BAACA1;
+  display: inline-block;
+  transform: translateY(1em);
+  margin-right: 2.7em;
+  font-size: 0.563em;
+}
+@media (min-width: 768px) {
+  .deals .deals__subtitle:before {
+    font-size: 0.938em;
+    transform: translateY(-0.5em);
+  }
+}
+.deals .deals__subtitle span {
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+@media (min-width: 768px) {
+  .deals .deals__subtitle span {
+    font-weight: 500;
+    font-size: 2.5em;
+  }
+}
+.deals .deals__item {
+  box-shadow: 0px 46px 180px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.25em;
+}
+.deals .deals__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .deals .deals__item {
+    margin-bottom: 3.125em;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .deals .deals__item .deals__star {
+    left: auto;
+    right: -2.25em;
+  }
+}
+.deals .deals__item .deals__button {
+  margin-top: 2.125em;
+}
+@media (max-width: 767px) {
+  .deals .deals__item .deals__button .btn {
+    width: 100%;
+  }
+}
 
 .giftCertificates {
   position: relative;

@@ -154,4 +154,91 @@
         }
     }
 
+    // -----------------------------------------------------------------------------
+    .deals__part {
+        margin-top: 1.625em;
+        margin-bottom: 3.125em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            position: relative;
+            margin-top: 1.875em;
+            margin-bottom: 6.25em;
+        }
+
+        .elipse {
+            @media (min-width: 768px) {
+                top: -12em;
+                left: 25em;
+            }
+        }
+    }
+
+    .deals__subtitle {
+        margin-bottom: 1.875em;
+        display: flex;
+        @media (min-width: 768px) {
+            margin-bottom: 4.375em;
+            display: block;
+        }
+
+        &:before {
+            content: '\e901';
+            font-family: 'icomoon';
+            color: $color_primary;
+            display: inline-block;
+            transform: translateY(1em);
+            margin-right: 2.7em;
+            font-size: 0.563em;
+            @media (min-width: 768px) {
+                font-size: 0.938em;
+                transform: translateY(-0.5em);
+            }
+        }
+
+        span {
+            line-height: 1.4;
+            font-weight: 600;
+            font-size: 1.25em;
+            @media (min-width: 768px) {
+                font-weight: 500;
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    .deals__item {
+        box-shadow: (0px 46px 180px rgba(0, 0, 0, 0.06));
+
+        margin-bottom: 1.25em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .deals__star {
+            @media (min-width: 768px) {
+                left: auto;
+                right: -2.25em;
+            }
+        }
+
+        .deals__button {
+            margin-top: 2.125em;
+
+            @media (max-width: 767px) {
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }
