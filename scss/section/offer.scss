@@ -1,0 +1,178 @@
+.offer {
+    .section__title {
+        .icon_arrow_long {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline-block;
+                font-style: normal;
+                color: $color_primary;
+                font-size: 0.1972em;
+                margin-right: 4em;
+                transform: translateY(-1em);
+            }
+        }
+    }
+
+    &__wrap {
+        background-image: url("../img/offer_bg.webp");
+
+        padding: 1.875em;
+        @media (min-width: 768px) {
+            position: relative;
+            padding: 5em 12.5em 22em;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                background-color: $color_white;
+                transform: skewY(5deg);
+                bottom: -4.5em;
+                height: 9em;
+
+            }
+        }
+
+    }
+
+    &__content {
+        text-align: center;
+        margin-bottom: 1.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        margin-top: 1.625em;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            line-height: 1.7;
+            margin-top: 2.25em;
+            width: 36.875em;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .crumbs {
+                margin-right: 1.25em;
+                margin-top: 0.75em;
+            }
+        }
+
+        span {
+            font-weight: 500;
+            color: #5B5B5B;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+
+        br {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline;
+            }
+        }
+
+    }
+
+    &__video {
+        position: relative;
+        width: 41.25em;
+        height: 35.25em;
+        padding: 2em 0.5em 9em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        margin: 0 -3em;
+        font-size: 0.5em;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            font-size: 1em;
+            position: absolute;
+            top: 8.5em;
+            right: 0;
+        }
+
+        p {
+            line-height: 0.95;
+            margin: 0;
+            width: fit-content;
+            background: rgba($color_white, 1);
+            color: $color_title;
+            padding: 0.324em 0.75em;
+            font-weight: 700;
+            font-size: 2.125em;
+            font-family: $second_font_family;
+            font-style: italic;
+
+        }
+    }
+
+    &__play {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 4.375em;
+        height: 4.375em;
+        background-color: $color_white;
+        color: $color_primary;
+        border-radius: 50%;
+        margin-bottom: 2.5em;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%)scale(1);
+            border: 0.75em solid $color_white;
+
+            animation: 2s pulsePlay infinite;
+
+            width: 5.25em;
+            height: 5.25em;
+
+        }
+
+    }
+
+    &__flower {
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: 5em;
+            right: 31em;
+            width: 19.9375em;
+            height: 11.4375em;
+            background-image: url("../img/offer_flower.png");
+        }
+    }
+
+}
+
+@keyframes pulsePlay {
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+}

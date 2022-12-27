@@ -1,0 +1,18 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var page = true;
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin notfound
+    section#notfound.notfound.section.bg
+        .container_center
+            .notfound__fon.bg
+            .notfound__content
+                .notfound__text
+                    span Такой страницы не существует, перейдите на главную
+                .notfound__btn
+                    a.btn(href="#") Вернуться на главную
+    // end notfound

@@ -1,0 +1,28 @@
+
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var page = true;
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin success
+    section#success.success.section.bg
+        .container_center
+            .section__star
+                .star
+                    i.icon_star
+            h1.section__title.desktop
+                span <i>Благодарим за заявку,</i><br>мы скоро с вами свяжемся!
+
+            h1.section__title.mobile
+                span <i>Благодарим<br> за заявку!</i>
+            .success__desc.mobile
+                span Мы скоро свяжемся с вами
+
+            .success__btn
+                a.btn(href="#") Вернуться на главную
+
+
+    // end success

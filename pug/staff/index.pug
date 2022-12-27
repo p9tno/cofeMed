@@ -1,0 +1,132 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var page = true;
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin staff
+    section#staff.staff.section
+        .container_center
+            h1.section__title
+                span.desktop <i>В «КофеМед» работают только специалисты</i><br> с высшим и среднеспециальным<br><i class="icon_arrow_long"></i> медицинским образованием
+                span.mobile <i>В «КофеМед» работают только специалисты</i><br> с высшим и среднеспе-циальным медицинским образованием
+            .staff__label
+                span Хотите работать в нашей команде?
+                a.mobile(href="#") Посмотрите открытые вакансии
+
+            .staff__department
+                .staff__title
+                    span Косметологическое отделение
+                .staff__list
+                    each item in [ {bg: '1', status: 'Врач-косметолог', name: 'Кузнецова Ирина Валерьевна', text: 'Уже 20 лет помогаю сохранять и поддерживать природную красоту и молодость, заботиться о коже и устранять несовершенства. Специализируюсь на инъекционных способах лечения.'}, {bg: '2', status: 'Врач-косметолог', name: 'Саватеева Екатерина Радиславовна', text: 'Моя задача — чтобы вы ощущали себя прекрасной в любом возрасте. Выполняю процедуры аппаратной и инъекционной косметологии не только женщинам, но и мужчинам.'}, {bg: '3', status: 'Косметолог-эстетист', name: 'Кириллова Екатерина Андреевна', text: 'Специализируюсь на эстетической косметологии. В основе моей работы — индивидуальный подход. Благодаря этому мы достигаем желаемого результата на все 100%.'} ]
+
+                        .staff__item
+                            .staff__img.bg(style="background-image: url('../../img/staff_"+item.bg+".jpg')")
+                            .staff__content
+                                .staff__star
+                                    .star.star_light(data-aos="flip-left")
+                                        i.icon_star
+                                .staff__status
+                                    span=item.status
+                                .staff__name
+                                    span=item.name
+                                .staff__text
+                                    span=item.text
+
+
+            .staff__department
+                .staff__title
+                    span Отделение пластической хирургии
+                .staff__list
+                    each item in [ {bg: '4', status: 'пластический хирург', name: 'Яхонтов Андрей Владимирович', text: 'Главным критерием качества моей работы является удовлетворенность пациентов полученным результатом. Более 10 000 клиентов обрели тело, о котором мечтали.'}, {bg: '5', status: 'Ассистент пластического хирурга', name: 'Яхонтов Тимофей Андреевич', text: 'Ассистирую главному хирургу во время проведения  операции, консультирую и занимаюсь послеоперационным сопровождением пациентов. '}, {bg: '6', status: 'Операционная медсестра', name: 'Оленева Наталья Викторовна ', text: 'Обеспечиваю полную подготовку операционно, пациентов и операционной бригады. А также с заботой провожу перевязки и веду послеоперационное наблюдения наших пациентов.'} ]
+
+                        .staff__item
+                            .staff__img.bg(style="background-image: url('../../img/staff_"+item.bg+".jpg')")
+                            .staff__content
+                                .staff__star
+                                    .star.star_light(data-aos="flip-left")
+                                        i.icon_star
+                                .staff__status
+                                    span=item.status
+                                .staff__name
+                                    span=item.name
+                                .staff__text
+                                    span=item.text
+
+
+    // end staff
+
+    // begin offer
+    section#offer.offer.section
+        .container_center.container_center_lg
+            .offer__wrap.bg
+                .offer__content
+                    h2.section__title
+                        span.desktop <i>Вы косметолог и хотите  <br>строить карьеру</i><br><i class="icon_arrow_long"></i> и расти в доходе?
+                        span.mobile <i>Вы косметолог <br> и хотите строить карьеру,</i> и расти в доходе?
+                    .offer__text
+                        .crumbs.desktop
+                            span.crumb
+                            span.crumb
+                            span.crumb
+                        span Посмотрите видео, чтобы узнать, какие предложения<br> есть у «КофеМед» для начинающих и опытных косметологов
+
+                .offer__video.bg(style="background-image: url('../../img/offer_mask.png')")
+                    .offer__play.youtubeModal-js#rsDoGqnPE4c
+                        i.icon_play
+                    p Предложение
+                    p для косметологов г. Чебоксары
+                .offer__flower.bg.desktop(data-aos="fade-left")
+
+    // end offer
+
+    // begin partnership
+    section#partnership.partnership.section
+        .container_center
+            .partnership__list.counter-wrap.counter-wrap_nozero
+                each item in [ {desc: 'Вы сотрудник «КофеМед»', text: 'Кому может быть интересно: молодые специалисты, которые ищут рабочее место с лицензией по косметологии; тем, кому нужно официальное трудоустройство; тем, у кого недостаточный свой клиентский поток; тем, у кого трудности с самопродвижением или нежелание им заниматься.'}, {desc: 'Вы партнер «КофеМед» <b>(ежемесячный взнос 200 000 руб.)</b>', text: 'Кому может быть интересно: тем, у кого есть хороший клиентский поток, эффективный уровень самопродвижения и есть мысль: «если бы я работала на себя, то с таким потоком зарабатывала бы тысяч пятьсот-шестьсот...»'}, {desc: 'Ваши пациенты — наши аппараты', text: 'Кому может быть интересно: в случаях, если у вас есть место работы и вы не планируете его менять, но на этом месте нет оборудования на котором вы хотите работать, а у нас оно есть.'} ]
+
+                    .partnership__item.counter-item
+                        .section__title
+                            span <i>Вариант сотрудничества №</i><i class="counter-el"></i>
+                        .partnership__desc
+                            span!=item.desc
+                        .partnership__text
+                            span!=item.text
+                        .partnership__button
+                            a.btn(href="#") Смотреть подробности
+    // end partnership
+
+    // begin jobs
+    section#jobs.jobs.section
+        .container_center
+            .jobs__caption
+                .section__star.star(data-aos="flip-left")
+                    i.icon_star
+                h2.section__title
+                    span Вакансии
+            .jobs__list
+                each item in ['', '', '' ]
+
+                    .jobs__item
+                        .jobs__bg.bg(style="background-image: url('../../img/jobs_1.jpg')")
+                        .jobs__content
+                            .jobs__title
+                                span Врач-косметолог
+                            .jobs__desc
+                                span Заработная плата: <b>от 30 000 руб. в месяц</b>
+                            .jobs__requirement
+                                span Требования:
+                            ul.list
+                                li
+                                    span Высшее медицинское образование 
+                                li
+                                    span Наличие дипломов и сертификатов законченных курсов по различным методикам, опыт работы и наличие своей клиентской базы
+                                li
+                                    span Личные качества: стремление к профессиональному росту, коммуникабельность, способность работать в команде, располагающая манера общения
+
+
+
+    // end jobs

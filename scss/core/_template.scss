@@ -237,6 +237,17 @@ body {
 	}
 }
 
+.counter-wrap_nozero {
+	.counter-item {
+		.counter-el {
+			&:before {
+				content: none;
+
+			}
+		}
+	}
+}
+
 .circle {
 	flex: none;
 	position: relative;
