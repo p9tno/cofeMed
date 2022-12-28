@@ -1,0 +1,70 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin events
+    section#events.events.section
+        .container_center
+            h1.section__title.section__title_lg
+                span <i>Обучение</i> в академии «КофеМед»
+            .events__desc
+                span Повышение квалификации для косметологов и специалистов со всех городов России
+            .events__content
+                .events__item
+                    .section__title
+                        span Предстоящие мероприятия
+                    .events__table
+                        .table
+                            .table__head.desktop
+                                .table__row
+                                    .table__col
+                                        span Название мероприятия
+                                    .table__col
+                                        span Дата проведения
+
+                            .table__body
+                                each item in ['', '', '', '' ]
+                                    .table__row
+                                        .table__col
+                                            .table__content
+                                                span Обучающий семинар «Неотложные состояния в практике врача косметолога»
+                                                b.mobile Дата проведения: 25 сентября 2022
+                                            .table__link
+                                                a(href="#") Подробнее о мероприятии
+                                        .table__col.desktop
+                                            span 25 сентября 2022
+
+                .events__item
+                    .section__title
+                        span Прошедшие мероприятия
+                    .events__table
+                        .table
+                            .table__head.desktop
+                                .table__row
+                                    .table__col
+                                        span Название мероприятия
+                                    .table__col
+                                        span Дата проведения
+
+                            .table__body
+                                each item in ['', '', '', '' ]
+                                    .table__row
+                                        .table__col
+                                            .table__content
+                                                span Обучающий семинар «Неотложные состояния в практике врача косметолога»
+                                                b.mobile Дата проведения: 25 сентября 2022
+                                            .table__link
+                                                a(href="#") Смотреть отчет
+                                        .table__col.desktop
+                                            span 25 сентября 2022
+
+
+
+
+
+
+    // end events

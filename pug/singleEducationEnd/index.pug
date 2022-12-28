@@ -1,0 +1,47 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
+
+
+block content
+    // begin events
+    section#events.events.section
+        .container_center
+            h1.section__title.section__title_lg
+                span <i>Обучение</i> в академии «КофеМед»
+            .events__desc
+                span Повышение квалификации для косметологов и специалистов со всех городов России
+            .events__content
+                .events__title
+                    span Отчет о прошедшем семинаре
+                .events__subtitle
+                    span «Неотложные состояния в практике врача косметолога»
+                .events__control
+                    .events__date
+                        span <b>Дата и время проведения:</b> 28 августа 2022 г, 09:00-14:00
+                    .events__arrows.custom_arrows.desktop
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+                .events__slider
+                    .swiper.events-swiper-js
+
+                        .swiper-wrapper
+                            each item in [1,2,3]
+                                .swiper-slide
+                                    .events__img
+                                        a(href="../../img/"+item+".jpg" data-fancybox data-type="image")
+                                            img(src="../../img/"+item+".jpg" loading="lazy" alt="img")
+
+                        .swiper-scrollbar.mobile
+
+
+                .events__report
+                    p // отчет о семинаре
+
+
+                    p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                    p   Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+
+    // end events

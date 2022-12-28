@@ -103,4 +103,19 @@ $(document).ready(function() {
         }
     });
 
+    const events = new Swiper('.events-swiper-js', {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        scrollbar: {
+           el: ".swiper-scrollbar",
+           // hide: true,
+        },
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+
+    });
+
 });

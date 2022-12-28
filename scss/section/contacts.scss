@@ -1,0 +1,237 @@
+.contacts {
+    @media (max-width: 767px) {
+        padding-top: 9.5em!important;
+    }
+
+    .container_center {
+        @media (max-width: 767px) {
+            padding: 0 1.5em;
+        }
+    }
+
+    .section__title {
+        @media (max-width: 767px) {
+            text-align: center;
+            position: relative;
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: 1.625em;
+                color: $color_white;
+            }
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            position: relative;
+
+        }
+
+        .elipse {
+            @media (min-width: 768px) {
+                font-size: 0.77em;
+                transform: rotate(-36deg);
+                top: 2em;
+                right: -18em;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 13.75em;
+        background-image: url("../img/contacts_bg_m.png");
+
+        @media (min-width: 768px) {
+            top: 1.375em;
+            right: -14em;
+            width: 43.875em;
+            height: 25.5em;
+            background-image: url("../img/contacts_bg.png");
+
+        }
+    }
+
+    &__info {
+        margin-top: 3.75em;
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+        }
+
+        .circle {
+            background-color: $main_color;
+            color: $color_white;
+        }
+
+        .bottom__text a {
+            color: $main_color;
+
+            &:hover {
+                color: $color_primary;
+            }
+
+            &:active {
+                color: #B5A79D;
+            }
+        }
+
+    }
+
+    &__cocial {
+        margin-top: 1.625em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+
+        }
+    }
+
+    &__map {
+        max-width: 106.25em;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 3.125em;
+        /* 50/16 */
+        @media (min-width: 768px) {
+            margin-top: 5.625em;
+
+        }
+
+        .map {
+            width: 100%;
+            height: 17.5em;
+            @media (min-width: 768px) {
+                height: 34.375em;
+
+            }
+        }
+
+        [class*="copyrights-pane"] {
+            display: none !important;
+        }
+
+        [class*="ground-pane"] {
+            filter: grayscale(1);
+        }
+
+        // .ymaps-2-1-79-image {
+        //     border: 1px solid #000;
+        //     width: 48px!important;
+        //     height: 68px!important;
+        //
+        //     @media (min-width: 768px) {
+        //         width: 5.75em;
+        //         height: 8.125em;
+        //     }
+        // }
+    }
+
+}
+
+.cocial {
+    display: flex;
+    align-items: center;
+
+    &__label {
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.875em;
+
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    &__item {
+
+        margin-right: 0.625em;
+        @media (min-width: 768px) {
+            margin-right: 1.25em;
+
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3.75em;
+        height: 3.75em;
+
+        border-radius: 100%;
+
+        background-color: $color_primary;
+        color: $color_white;
+        text-decoration: none;
+
+        font-size: 0.6667em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        i {
+            font-size: 1.125em;
+        }
+
+        &:hover {
+            background-color: #CCBDB2;
+        }
+
+        &:active {
+            background-color: #B5A79D;
+
+        }
+
+        &_btn {
+            width: auto;
+            height: auto;
+
+            border-radius: 2.5em;
+
+            padding: 0.25em 1.375em 0.25em 0.25em;
+
+            span {
+                font-size: 1.3125em;
+                font-weight: 600;
+                @media (min-width: 768px) {
+                    font-size: 1.125em;
+
+                }
+            };
+        }
+
+    }
+
+    &__img {
+        width: 3.25em;
+        height: 3.25em;
+
+        border-radius: 100%;
+        margin-right: 0.625em;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}

@@ -1,0 +1,55 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var headerOpasity = 'header_opacity';
+    -var bodyBgColor = 'bg_white';
+    -var page = true;
+
+
+block content
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center
+            .contacts__content
+                .contacts__bg.bg
+                .elipse.desktop
+                h1.section__title.section__title_lg
+                    span <i>Контакты</i> «КофеМед»
+
+                .contacts__info
+                    .bottom__item
+                        .bottom__icon.circle
+                            i.icon_phone
+                        .bottom__text
+                            b Телефон: <a href="tel:8 (8352) 28-51-19">8 (8352) 28-51-19</a>
+                            span с 9:00 до 20:00 (ежедневно)
+
+                    .bottom__item
+                        .bottom__icon.circle
+                            i.icon_location
+                        .bottom__text
+                            b Адрес:
+                            span Чувашская Республика, г. Чебоксары,<br> ул. Гражданская, дом 5, помещение 14
+                .contacts__cocial
+                    .cocial__label
+                        span Присоединяйтесь к нам в соцсетях:
+                    .cocial
+                        .cocial__item
+                            a.cocial__link(href="#" target="_blank")
+                                i.icon_telegram
+                        .cocial__item
+                            a.cocial__link(href="#" target="_blank")
+                                i.icon_vk
+                        .cocial__item
+                            a.cocial__link.cocial__link_btn(href="#" target="_blank")
+                                .cocial__img
+                                    img(src="../img/cofemed.svg", alt="cofemed")
+                                span @cofemed
+
+        .contacts__map
+            .map#map
+
+
+
+
+    // end contacts
